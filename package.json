@@ -1,0 +1,20 @@
+{
+    "name": "ch4",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "dev": "npx tailwindcss -i ./src/input.css -o ./public/css/output.css --watch",
+        "build": "npx tailwindcss -o ./public/css/output.css --minify",
+        "start": "node server/index.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "tailwindcss": "^3.4.3"
+    },
+    "dependencies": {
+        "flowbite": "^2.3.0"
+    }
+}
