@@ -40,14 +40,32 @@ module.exports = {
             manufacture_id: {
                 type: Sequelize.BIGINT,
                 allowNull: false,
+                references: {
+                    model: {
+                        tableName: "Manufactures",
+                    },
+                    key: "id",
+                },
             },
             type_id: {
                 type: Sequelize.BIGINT,
                 allowNull: false,
+                references: {
+                    model: {
+                        tableName: "Types",
+                    },
+                    key: "id",
+                },
             },
             size_id: {
                 type: Sequelize.BIGINT,
                 allowNull: false,
+                references: {
+                    model: {
+                        tableName: "Sizes",
+                    },
+                    key: "id",
+                },
             },
             createdAt: {
                 allowNull: false,
