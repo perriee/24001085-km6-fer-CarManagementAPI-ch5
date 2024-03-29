@@ -16,6 +16,9 @@ module.exports = (sequelize, DataTypes) => {
 
             // Size
             Car.belongsTo(models.Size, { foreignKey: "size_id" });
+
+            // Transmission
+            Car.belongsTo(models.Transmission, { foreignKey: "transmission_id" });
         }
     }
     Car.init(
@@ -30,6 +33,7 @@ module.exports = (sequelize, DataTypes) => {
             manufacture_id: DataTypes.BIGINT,
             type_id: DataTypes.BIGINT,
             size_id: DataTypes.BIGINT,
+            transmission_id: DataTypes.BIGINT,
         },
         {
             sequelize,

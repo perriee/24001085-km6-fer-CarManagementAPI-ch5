@@ -67,6 +67,16 @@ module.exports = {
                     key: "id",
                 },
             },
+            transmission_id: {
+                type: Sequelize.BIGINT,
+                allowNull: false,
+                references: {
+                    model: {
+                        tableName: "Transmissions",
+                    },
+                    key: "id",
+                },
+            },
             createdAt: {
                 allowNull: false,
                 type: Sequelize.DATE,
