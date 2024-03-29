@@ -6,86 +6,80 @@ exports.getManufactures = async () => {
     return data;
 };
 
-// exports.getClass = async (id) => {
-//     const key = `classes:${id}`;
+exports.getManufacture = async (id) => {
+    const key = `manufactures:${id}`;
 
-//     // check redis and if there are any data return data from redis
-//     let data = await getDataRedis(key);
-//     if (data) {
-//         return data;
-//     }
+    // check redis and if there are any data return data from redis
+    let data = await getDataRedis(key);
+    if (data) {
+        return data;
+    }
 
-//     // if in the redis not found, we will get from database (postgres) and then save it to redis
-//     data = await classes.findAll({
-//         where: {
-//             id,
-//         },
-//         include: {
-//             model: student,
-//         },
-//     });
+    // if in the redis not found, we will get from database (postgres) and then save it to redis
+    data = await Manufacture.findAll({
+        where: {
+            id,
+        },
+    });
 
-//     if (data.length > 0) {
-//         // save in the redis if in the postgres is found
-//         await setDataRedis(key, data[0], 300);
+    if (data.length > 0) {
+        // save in the redis if in the postgres is found
+        await setDataRedis(key, data[0], 300);
 
-//         return data[0];
-//     }
+        return data[0];
+    }
 
-//     throw new Error(`Class with id ${id} is not found!`);
-// };
+    throw new Error(`Manufacture with id ${id} is not found!`);
+};
 
-// exports.createClass = async (payload) => {
-//     // create data to postgres
-//     const data = await classes.create(payload);
+exports.createManufacture = async (payload) => {
+    // create data to postgres
+    const data = await Manufacture.create(payload);
 
-//     // create data to redis
-//     const key = `classes:${id}`;
-//     await setDataRedis(key, data, 300);
+    // create data to redis
+    const key = `manufactures:${data.id}`;
+    await setDataRedis(key, data, 300);
 
-//     return data;
-// };
+    return data;
+};
 
-// exports.updateClass = async (id, payload) => {
-//     const key = `classes:${id}`;
+exports.updateManufacture = async (id, payload) => {
+    const key = `manufactures:${id}`;
 
-//     // update data in postgres
-//     await classes.update(payload, {
-//         where: { id },
-//     });
+    // update data in postgres
+    await Manufacture.update(payload, {
+        where: { id },
+    });
 
-//     // get data from postgres
-//     data = await classes.findAll({
-//         where: {
-//             id,
-//         },
-//         include: {
-//             model: student,
-//         },
-//     });
+    // get data from postgres
+    data = await Manufacture.findAll({
+        where: {
+            id,
+        },
+    });
 
-//     if (data.length > 0) {
-//         // save to redis (cache)
-//         await setDataRedis(key, data[0], 300);
+    if (data.length > 0) {
+        // save to redis (cache)
+        await setDataRedis(key, data[0], 300);
 
-//         return data[0];
-//     }
+        return data[0];
+    }
 
-//     throw new Error(`Class with id ${id} is not found!`);
-// };
+    throw new Error(`Manufacture with id ${id} is not found!`);
+};
 
-// exports.deleteClass = async (id) => {
-//     const key = `classes:${id}`;
+exports.deleteManufacture = async (id) => {
+    const key = `manufactures:${id}`;
 
-//     // delete from postgres
-//     const data = await classes.destroy({
-//         where: { id },
-//     });
+    // delete from postgres
+    const data = await Manufacture.destroy({
+        where: { id },
+    });
 
-//     // delete from redis
-//     await deleteDataRedis(key);
+    // delete from redis
+    await deleteDataRedis(key);
 
-//     if (data) return null;
+    if (data) return null;
 
-//     throw new Error(`Class with id ${id} is not found`);
-// };
+    throw new Error(`Manufacture with id ${id} is not found`);
+};

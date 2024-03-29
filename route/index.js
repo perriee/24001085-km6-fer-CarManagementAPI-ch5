@@ -3,6 +3,6 @@ const router = express.Router();
 
 const manufacture = require("./manufacture");
 
-router.use("/manufacture", manufacture);
+router.use("/manufactures", manufacture);
 
 module.exports = router;

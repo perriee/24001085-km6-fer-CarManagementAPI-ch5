@@ -3,12 +3,15 @@ const router = express.Router();
 
 const manufactureController = require("../controller/manufacture");
 
-router.route("/").get(manufactureController.getManufactures);
+router
+    .route("/")
+    .get(manufactureController.getManufactures)
+    .post(manufactureController.createManufacture);
 
-// router
-//     .route("/:id")
-//     .get(classController.getClass)
-//     .put(classController.updateClass)
-//     .delete(classController.deleteClass);
+router
+    .route("/:id")
+    .get(manufactureController.getManufacture)
+    .put(manufactureController.updateManufacture)
+    .delete(manufactureController.deleteManufacture);
 
 module.exports = router;

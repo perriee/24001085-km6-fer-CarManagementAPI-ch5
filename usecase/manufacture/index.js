@@ -5,23 +5,23 @@ exports.getManufactures = async () => {
     return data;
 };
 
-// exports.getClass = async (id) => {
-//     const data = await classRepo.getClass(id);
-//     return data;
-// };
+exports.getManufacture = async (id) => {
+    const data = await manufactureRepo.getManufacture(id);
+    return data;
+};
 
-// exports.createClass = async (payload) => {
-//     const data = await classRepo.createClass(payload);
-//     return data;
-// };
+exports.createManufacture = async (payload) => {
+    const data = await manufactureRepo.createManufacture(payload);
+    return data;
+};
 
-// exports.updateClass = async (id, payload) => {
-//     await classRepo.updateClass(id, payload);
-//     const data = classRepo.getClass(id);
-//     return data;
-// };
+exports.updateManufacture = async (id, payload) => {
+    await manufactureRepo.updateManufacture(id, payload);
+    const data = manufactureRepo.getManufacture(id);
+    return data;
+};
 
-// exports.deleteClass = async (id) => {
-//     const data = await classRepo.deleteClass(id);
-//     return data;
-// };
+exports.deleteManufacture = async (id) => {
+    const data = await manufactureRepo.deleteManufacture(id);
+    return data;
+};

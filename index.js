@@ -1,7 +1,7 @@
 require("dotenv").config(); // enable dotenv
 
 const express = require("express");
-// const router = require("./route");
+const router = require("./route");
 const fileUpload = require("express-fileupload");
 
 const app = express();
@@ -11,7 +11,7 @@ app.use(express.json()); // get body -> json
 app.use(fileUpload({ useTempFiles: true })); // get body -> form-data
 app.use(express.static("public"));
 
-// app.use("/api", router);
+app.use("/api", router);
 
 // Error middleware
 app.use((err, req, res, next) => {
