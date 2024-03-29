@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Car Management Dashboard</title>
+        <link href="./css/output.css" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- Navbar -->
+        <header class="antialiased">
+            <nav class="bg-white border-gray-200 px-4 lg:px-36 py-2.5">
+                <div class="flex flex-wrap justify-between items-center">
+                    <div class="flex justify-between items-center w-full">
+                        <a href="./index.html" class="flex gap-2">
+                            <img src="./images/logo-binar.png" class="h-9" alt="FlowBite Logo" />
+                            <span class="self-center text-xl font-semibold whitespace-nowrap"
+                                >Binar Car Rental</span
+                            >
+                        </a>
+                        <form action="#" method="GET" class="hidden lg:block lg:pl-2">
+                            <label for="topbar-search" class="sr-only">Search</label>
+                            <div class="flex gap-2 lg:w-96">
+                                <input
+                                    type="text"
+                                    name="email"
+                                    id="topbar-search"
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
+                                    placeholder="Search Car"
+                                />
+                                <button
+                                    type="button"
+                                    class="text-white bg-primary hover:bg-primary-hover font-medium rounded-lg text-sm px-5 py-2.5 h-full transition-all"
+                                >
+                                    Search
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main class="px-4 lg:px-36">
+            <section class="flex justify-between items-center mt-10">
+                <h1 class="text-2xl font-bold">Add New Car</h1>
+            </section>
+
+            <section class="">
+                <div class="lg:py-4">
+                    <form action="#">
+                        <div class="grid gap-4 sm:grid-cols-2 sm:gap-6">
+                            <!-- Name -->
+                            <div class="w-full">
+                                <label
+                                    for="name"
+                                    class="block mb-2 text-sm font-medium text-gray-900"
+                                    >Name</label
+                                >
+                                <input
+                                    type="text"
+                                    name="name"
+                                    id="name"
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+                                    placeholder="Name"
+                                    required=""
+                                />
+                            </div>
+
+                            <!-- Plate -->
+                            <div class="w-full">
+                                <label
+                                    for="plate"
+                                    class="block mb-2 text-sm font-medium text-gray-900"
+                                    >Plate</label
+                                >
+                                <input
+                                    type="text"
+                                    name="plate"
+                                    id="plate"
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+                                    placeholder="Plate"
+                                    required=""
+                                />
+                            </div>
+
+                            <!-- Manufacture -->
+                            <div class="w-full">
+                                <label
+                                    for="manufacture"
+                                    class="block mb-2 text-sm font-medium text-gray-900"
+                                    >Manufacture</label
+                                >
+                                <select
+                                    id="manufacture"
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                                >
+                                    <option selected>Choose a Manufacture</option>
+                                    <option value="BMW">BMW</option>
+                                    <option value="Toyota">Toyota</option>
+                                    <option value="Tesla">Tesla</option>
+                                </select>
+                            </div>
+
+                            <!-- Model -->
+                            <div class="w-full">
+                                <label
+                                    for="model"
+                                    class="block mb-2 text-sm font-medium text-gray-900"
+                                    >Model</label
+                                >
+                                <input
+                                    type="text"
+                                    name="model"
+                                    id="model"
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+                                    placeholder="Model"
+                                    required=""
+                                />
+                            </div>
+
+                            <!-- Type -->
+                            <div>
+                                <label
+                                    for="type"
+                                    class="block mb-2 text-sm font-medium text-gray-900"
+                                    >Type</label
+                                >
+                                <select
+                                    id="type"
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                                >
+                                    <option selected>Choose a Type</option>
+                                    <option value="Sedan">Sedan</option>
+                                    <option value="Hatchback">Hatchback</option>
+                                    <option value="Convertible">Convertible</option>
+                                    <option value="Coupe">Coupe</option>
+                                </select>
+                            </div>
+
+                            <!-- Price -->
+                            <div>
+                                <label
+                                    for="price"
+                                    class="block mb-2 text-sm font-medium text-gray-900"
+                                    >Rent Per Day</label
+                                >
+                                <input
+                                    type="number"
+                                    name="price"
+                                    id="price"
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+                                    placeholder="Rp 0"
+                                    required=""
+                                />
+                            </div>
+
+                            <!-- Size -->
+                            <div>
+                                <label
+                                    for="size"
+                                    class="block mb-2 text-sm font-medium text-gray-900"
+                                    >Size</label
+                                >
+                                <select
+                                    id="size"
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                                >
+                                    <option selected>Choose a Size</option>
+                                    <option value="Small">Small</option>
+                                    <option value="Medium">Medium</option>
+                                    <option value="Large">Large</option>
+                                </select>
+                            </div>
+
+                            <!-- Image -->
+                            <div>
+                                <label
+                                    class="block mb-2 text-sm font-medium text-gray-900"
+                                    for="file_input"
+                                    >Upload file</label
+                                >
+                                <input
+                                    class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 focus:outline-none"
+                                    id="file_input"
+                                    type="file"
+                                />
+                            </div>
+
+                            <!-- Available -->
+                            <div>
+                                <label class="inline-flex items-center cursor-pointer">
+                                    <input type="checkbox" value="" class="sr-only peer" />
+                                    <div
+                                        class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"
+                                    ></div>
+                                    <span class="ms-3 text-sm font-medium text-gray-900"
+                                        >Available</span
+                                    >
+                                </label>
+                            </div>
+
+                            <!-- Description -->
+                            <div class="sm:col-span-2">
+                                <label
+                                    for="description"
+                                    class="block mb-2 text-sm font-medium text-gray-900"
+                                    >Description</label
+                                >
+                                <textarea
+                                    id="description"
+                                    rows="8"
+                                    class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary-500 focus:border-primary-500"
+                                    placeholder="Description"
+                                ></textarea>
+                            </div>
+                        </div>
+                        <button
+                            type="submit"
+                            class="inline-flex items-center px-5 py-2.5 mt-4 sm:mt-6 text-sm font-medium text-center text-white bg-primary rounded-lg hover:bg-primary-hover transition-all"
+                        >
+                            Add Car
+                        </button>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <!-- Flowbite Script -->
+        <script src="../node_modules/flowbite/dist/flowbite.min.js"></script>
+    </body>
+</html>
