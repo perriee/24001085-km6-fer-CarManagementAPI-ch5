@@ -7,7 +7,7 @@ module.exports = {
                 allowNull: false,
                 autoIncrement: true,
                 primaryKey: true,
-                type: Sequelize.BIGINT,
+                type: Sequelize.INTEGER,
             },
             name: {
                 type: Sequelize.STRING,
@@ -38,7 +38,7 @@ module.exports = {
                 allowNull: false,
             },
             manufacture_id: {
-                type: Sequelize.BIGINT,
+                type: Sequelize.INTEGER,
                 allowNull: false,
                 references: {
                     model: {
@@ -48,7 +48,7 @@ module.exports = {
                 },
             },
             type_id: {
-                type: Sequelize.BIGINT,
+                type: Sequelize.INTEGER,
                 allowNull: false,
                 references: {
                     model: {
@@ -58,7 +58,7 @@ module.exports = {
                 },
             },
             size_id: {
-                type: Sequelize.BIGINT,
+                type: Sequelize.INTEGER,
                 allowNull: false,
                 references: {
                     model: {
@@ -68,7 +68,7 @@ module.exports = {
                 },
             },
             transmission_id: {
-                type: Sequelize.BIGINT,
+                type: Sequelize.INTEGER,
                 allowNull: false,
                 references: {
                     model: {
