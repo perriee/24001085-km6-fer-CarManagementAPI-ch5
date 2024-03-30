@@ -18,24 +18,25 @@
                                 >Binar Car Rental</span
                             >
                         </a>
-                        <form action="#" method="GET" class="hidden lg:block lg:pl-2">
+                        <div class="hidden lg:block lg:pl-2">
                             <label for="topbar-search" class="sr-only">Search</label>
                             <div class="flex gap-2 lg:w-96">
                                 <input
                                     type="text"
-                                    name="email"
-                                    id="topbar-search"
+                                    name="car-name-input"
+                                    id="car-name-input"
                                     class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
                                     placeholder="Search Car"
                                 />
                                 <button
                                     type="button"
+                                    id="search-button"
                                     class="text-primary border-2 border-primary bg-white hover:text-white hover:bg-primary-hover font-medium rounded-lg text-sm px-5 py-2.5 h-full transition-all"
                                 >
                                     Search
                                 </button>
                             </div>
-                        </form>
+                        </div>
                     </div>
                 </div>
             </nav>
@@ -45,7 +46,7 @@
             <section class="flex justify-between items-center mt-5 lg:mt-10">
                 <h1 class="text-2xl font-bold">List Car</h1>
                 <a
-                    href="./add_car.html"
+                    href="#"
                     class="text-white bg-primary hover:bg-primary-hover font-medium rounded-lg text-sm px-5 py-2.5 transition-all"
                 >
                     Add New Car
@@ -55,169 +56,38 @@
             <!-- Filter Size -->
             <section class="flex gap-3 mt-5 lg:mt-3">
                 <div
-                    class="border-2 border-primary text-primary font-medium px-3 py-1 rounded-md cursor-pointer hover:text-white hover:bg-primary transition-all"
+                    class="filter-item border-2 border-primary text-primary font-medium px-3 py-1 rounded-md cursor-pointer hover:text-white hover:bg-primary transition-all"
                 >
                     All
                 </div>
                 <div
-                    class="border-2 border-primary text-primary font-medium px-3 py-1 rounded-md cursor-pointer hover:text-white hover:bg-primary transition-all"
+                    class="filter-item border-2 border-primary text-primary font-medium px-3 py-1 rounded-md cursor-pointer hover:text-white hover:bg-primary transition-all"
                 >
                     Small
                 </div>
                 <div
-                    class="border-2 border-primary text-primary font-medium px-3 py-1 rounded-md cursor-pointer hover:text-white hover:bg-primary transition-all"
+                    class="filter-item border-2 border-primary text-primary font-medium px-3 py-1 rounded-md cursor-pointer hover:text-white hover:bg-primary transition-all"
                 >
                     Medium
                 </div>
                 <div
-                    class="border-2 border-primary text-primary font-medium px-3 py-1 rounded-md cursor-pointer hover:text-white hover:bg-primary transition-all"
+                    class="filter-item border-2 border-primary text-primary font-medium px-3 py-1 rounded-md cursor-pointer hover:text-white hover:bg-primary transition-all"
                 >
                     Large
                 </div>
             </section>
 
             <!-- Cars Card Container -->
-            <section class="grid grid-cols-1 lg:grid-cols-3 gap-10 my-8">
-                <!-- Car Card Item -->
-                <div class="bg-white border border-gray-200 rounded-lg shadow">
-                    <div class="h-56">
-                        <img
-                            class="w-full h-full object-cover rounded-t-xl"
-                            src="./images/car.png"
-                            alt="Image Car"
-                        />
-                    </div>
-                    <div class="flex flex-col gap-4 p-5">
-                        <div class="flex flex-col">
-                            <p class="text-slate-500">Nama/Tipe Mobil</p>
-                            <h5 class="font-bold text-lg">Rp 10 / hari</h5>
-                        </div>
-                        <div class="flex items-center gap-2">
-                            <img src="./images/fi_clock.png" alt="Clock" class="w-auto h-6" />
-                            <span class="text-slate-500">Updated at 4 Apr 2022, 09.00</span>
-                        </div>
-                        <div class="flex gap-4">
-                            <button
-                                type="button"
-                                class="bg-white border-2 border-red-600 text-red-600 font-medium rounded-lg text-sm px-5 py-2.5 w-full hover:bg-red-600 hover:text-white transition-all"
-                            >
-                                Delete
-                            </button>
-                            <button
-                                type="button"
-                                class="text-white bg-[#5CB85F] font-medium rounded-lg text-sm px-5 py-2.5 w-full hover:bg-[#4e9d50] transition-all"
-                            >
-                                Edit
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <!-- Car Card Item -->
-                <div class="bg-white border border-gray-200 rounded-lg shadow">
-                    <div class="h-56">
-                        <img
-                            class="w-full h-full object-cover rounded-t-xl"
-                            src="./images/car.png"
-                            alt="Image Car"
-                        />
-                    </div>
-                    <div class="flex flex-col gap-4 p-5">
-                        <div class="flex flex-col">
-                            <p class="text-slate-500">Nama/Tipe Mobil</p>
-                            <h5 class="font-bold text-lg">Rp 10 / hari</h5>
-                        </div>
-                        <div class="flex items-center gap-2">
-                            <img src="./images/fi_clock.png" alt="Clock" class="w-auto h-6" />
-                            <span class="text-slate-500">Updated at 4 Apr 2022, 09.00</span>
-                        </div>
-                        <div class="flex gap-4">
-                            <button
-                                type="button"
-                                class="bg-white border-2 border-red-600 text-red-600 font-medium rounded-lg text-sm px-5 py-2.5 w-full hover:bg-red-600 hover:text-white transition-all"
-                            >
-                                Delete
-                            </button>
-                            <button
-                                type="button"
-                                class="text-white bg-[#5CB85F] font-medium rounded-lg text-sm px-5 py-2.5 w-full hover:bg-[#4e9d50] transition-all"
-                            >
-                                Edit
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <!-- Car Card Item -->
-                <div class="bg-white border border-gray-200 rounded-lg shadow">
-                    <div class="h-56">
-                        <img
-                            class="w-full h-full object-cover rounded-t-xl"
-                            src="./images/car.png"
-                            alt="Image Car"
-                        />
-                    </div>
-                    <div class="flex flex-col gap-4 p-5">
-                        <div class="flex flex-col">
-                            <p class="text-slate-500">Nama/Tipe Mobil</p>
-                            <h5 class="font-bold text-lg">Rp 10 / hari</h5>
-                        </div>
-                        <div class="flex items-center gap-2">
-                            <img src="./images/fi_clock.png" alt="Clock" class="w-auto h-6" />
-                            <span class="text-slate-500">Updated at 4 Apr 2022, 09.00</span>
-                        </div>
-                        <div class="flex gap-4">
-                            <button
-                                type="button"
-                                class="bg-white border-2 border-red-600 text-red-600 font-medium rounded-lg text-sm px-5 py-2.5 w-full hover:bg-red-600 hover:text-white transition-all"
-                            >
-                                Delete
-                            </button>
-                            <button
-                                type="button"
-                                class="text-white bg-[#5CB85F] font-medium rounded-lg text-sm px-5 py-2.5 w-full hover:bg-[#4e9d50] transition-all"
-                            >
-                                Edit
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <!-- Car Card Item -->
-                <div class="bg-white border border-gray-200 rounded-lg shadow">
-                    <div class="h-56">
-                        <img
-                            class="w-full h-full object-cover rounded-t-xl"
-                            src="./images/car.png"
-                            alt="Image Car"
-                        />
-                    </div>
-                    <div class="flex flex-col gap-4 p-5">
-                        <div class="flex flex-col">
-                            <p class="text-slate-500">Nama/Tipe Mobil</p>
-                            <h5 class="font-bold text-lg">Rp 10 / hari</h5>
-                        </div>
-                        <div class="flex items-center gap-2">
-                            <img src="./images/fi_clock.png" alt="Clock" class="w-auto h-6" />
-                            <span class="text-slate-500">Updated at 4 Apr 2022, 09.00</span>
-                        </div>
-                        <div class="flex gap-4">
-                            <button
-                                type="button"
-                                class="bg-white border-2 border-red-600 text-red-600 font-medium rounded-lg text-sm px-5 py-2.5 w-full hover:bg-red-600 hover:text-white transition-all"
-                            >
-                                Delete
-                            </button>
-                            <button
-                                type="button"
-                                class="text-white bg-[#5CB85F] font-medium rounded-lg text-sm px-5 py-2.5 w-full hover:bg-[#4e9d50] transition-all"
-                            >
-                                Edit
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <section
+                class="grid grid-cols-1 lg:grid-cols-3 gap-10 my-8"
+                id="cars-card-container"
+            ></section>
         </main>
 
+        <!-- My Script -->
+        <script type="module" src="./scripts/main.js"></script>
+
         <!-- Flowbite Script -->
-        <script src="../node_modules/flowbite/dist/flowbite.min.js"></script>
+        <script src="./scripts/flowbite.js"></script>
     </body>
 </html>
