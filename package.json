@@ -4,8 +4,7 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "dev:fe": "npx tailwindcss -i ./src/input.css -o ./public/css/output.css --watch",
-        "dev:be": "npx nodemon index.js",
+        "dev": "npx nodemon index.js",
         "build": "npx tailwindcss -o ./public/css/output.css --minify",
         "start": "node server/index.js"
     },
