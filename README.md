@@ -40,7 +40,7 @@ by default server running in `localhost:3000`
 
 ## API Reference
 
-### Car Endpoint
+### Car Endpoints
 
 | Route           | Method   | Description      |
 | --------------- | -------- | ---------------- |
@@ -50,7 +50,7 @@ by default server running in `localhost:3000`
 | `/api/cars/:id` | `PUT`    | Update car by ID |
 | `/api/cars/:id` | `DELETE` | Delete car by ID |
 
-### Manufacture Endpoint
+### Manufacture Endpoints
 
 | Route                   | Method   | Description              |
 | ----------------------- | -------- | ------------------------ |
@@ -60,7 +60,7 @@ by default server running in `localhost:3000`
 | `/api/manufactures/:id` | `PUT`    | Update manufacture by ID |
 | `/api/manufactures/:id` | `DELETE` | Delete manufacture by ID |
 
-### Type Endpoint
+### Type Endpoints
 
 | Route            | Method   | Description       |
 | ---------------- | -------- | ----------------- |
@@ -70,7 +70,7 @@ by default server running in `localhost:3000`
 | `/api/types/:id` | `PUT`    | Update type by ID |
 | `/api/types/:id` | `DELETE` | Delete type by ID |
 
-### Size Endpoint
+### Size Endpoints
 
 | Route            | Method   | Description       |
 | ---------------- | -------- | ----------------- |
@@ -80,7 +80,7 @@ by default server running in `localhost:3000`
 | `/api/sizes/:id` | `PUT`    | Update size by ID |
 | `/api/sizes/:id` | `DELETE` | Delete size by ID |
 
-### Transmission Endpoint
+### Transmission Endpoints
 
 | Route                    | Method   | Description               |
 | ------------------------ | -------- | ------------------------- |
