@@ -4,6 +4,11 @@ Challenge Chapter 4 - Binar Academy
 
 ![dashboard](public/images/dashboard.png)
 
+#### Dashboard Features
+- Showing all cars
+- Filter car by size
+- Search car by name
+
 ## ERDiagram
 
 ![db diagram](public/images/ERD-Challenge-Chapter4.png)
