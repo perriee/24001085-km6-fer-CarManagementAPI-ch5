@@ -22,8 +22,6 @@ Challenge Chapter 4 - Binar Academy
 - [Cloudinary](https://cloudinary.com/)
 - [Flowbite](https://flowbite.com/)
 
-![db diagram](public/images/ERD-Challenge-Chapter4.png)
-
 ## Installation
 
 #### 1. Clone Repository
