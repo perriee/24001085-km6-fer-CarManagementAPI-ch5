@@ -30,7 +30,7 @@ Challenge Chapter 4 - Binar Academy
 git clone https://github.com/perriee/24001085-km6-fer-CarManagementDashboard-ch4.git
 ```
 
-#### 2. Install Depencencies
+#### 2. Install Dependencies
 
 ```
 npm install
