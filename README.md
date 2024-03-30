@@ -5,11 +5,22 @@ Challenge Chapter 4 - Binar Academy
 ![dashboard](public/images/dashboard.png)
 
 #### Dashboard Features
-- Showing all cars
-- Filter car by size
-- Search car by name
+- Showing All Cars
+- Filter Car by Size
+- Search Car by Name
+- Responsive Web Design
 
 ## ERDiagram
+
+![db diagram](public/images/ERD-Challenge-Chapter4.png)
+
+## Tech Stack
+- [Express.js](https://expressjs.com)
+- [Sequelize](https://sequelize.org/)
+- [Redis](https://redis.io/docs/)
+- [PostgreSQL](https://www.postgresql.org/)
+- [Cloudinary](https://cloudinary.com/)
+- [Flowbite](https://flowbite.com/)
 
 ![db diagram](public/images/ERD-Challenge-Chapter4.png)
 
