@@ -6,7 +6,7 @@
     "scripts": {
         "dev": "npx nodemon index.js",
         "build": "npx tailwindcss -o ./public/css/output.css --minify",
-        "start": "node index.js"
+        "start": "npx sequelize db:migrate && node index.js"
     },
     "keywords": [],
     "author": "",

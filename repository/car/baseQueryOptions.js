@@ -8,23 +8,68 @@ exports.baseQueryOptions = {
     include: [
         {
             model: User,
-            attributes: { exclude: ["createdAt", "updatedAt", "deletedAt"] },
+            attributes: {
+                exclude: [
+                    "createdAt",
+                    "updatedAt",
+                    "deletedAt",
+                    "createdBy",
+                    "deletedBy",
+                    "lastUpdatedBy",
+                ],
+            },
         },
         {
             model: Manufacture,
-            attributes: { exclude: ["createdAt", "updatedAt", "deletedAt"] },
+            attributes: {
+                exclude: [
+                    "createdAt",
+                    "updatedAt",
+                    "deletedAt",
+                    "createdBy",
+                    "deletedBy",
+                    "lastUpdatedBy",
+                ],
+            },
         },
         {
             model: Type,
-            attributes: { exclude: ["createdAt", "updatedAt", "deletedAt"] },
+            attributes: {
+                exclude: [
+                    "createdAt",
+                    "updatedAt",
+                    "deletedAt",
+                    "createdBy",
+                    "deletedBy",
+                    "lastUpdatedBy",
+                ],
+            },
         },
         {
             model: Size,
-            attributes: { exclude: ["createdAt", "updatedAt", "deletedAt"] },
+            attributes: {
+                exclude: [
+                    "createdAt",
+                    "updatedAt",
+                    "deletedAt",
+                    "createdBy",
+                    "deletedBy",
+                    "lastUpdatedBy",
+                ],
+            },
         },
         {
             model: Transmission,
-            attributes: { exclude: ["createdAt", "updatedAt", "deletedAt"] },
+            attributes: {
+                exclude: [
+                    "createdAt",
+                    "updatedAt",
+                    "deletedAt",
+                    "createdBy",
+                    "deletedBy",
+                    "lastUpdatedBy",
+                ],
+            },
         },
     ],
 };

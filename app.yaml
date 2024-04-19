@@ -1,6 +1,5 @@
 runtime: nodejs20
-service: ferry-febriansyah-challenge-ch-5
+# service: ferry-febriansyah-challenge-ch-5
 
-predeploy:
-    - npm install
-    - npx sequelize db:migrate
+vpc_access_connector:
+    name: "projects/fsw2-binar-academy/locations/asia-southeast2/connectors/connect-to-sql"
