@@ -48,6 +48,7 @@ exports.createCar = async (req, res, next) => {
             size_id,
             transmission_id,
         } = req.body;
+        const userID = req.user.id;
 
         let image;
         if (req.files) {
@@ -165,6 +166,7 @@ exports.createCar = async (req, res, next) => {
             type_id,
             size_id,
             transmission_id,
+            createdBy: userID,
         });
 
         res.status(201).json({
@@ -179,6 +181,8 @@ exports.createCar = async (req, res, next) => {
 exports.updateCar = async (req, res, next) => {
     try {
         const { id } = req.params;
+        const userID = req.user.id;
+
         const {
             name,
             plate,
@@ -308,6 +312,7 @@ exports.updateCar = async (req, res, next) => {
             type_id,
             size_id,
             transmission_id,
+            lastUpdatedBy: userID,
         });
 
         res.status(200).json({
@@ -322,6 +327,11 @@ exports.updateCar = async (req, res, next) => {
 exports.deleteCar = async (req, res, next) => {
     try {
         const { id } = req.params;
+        const userID = req.user.id;
+
+        await carUseCase.deleteCar(id, {
+            deletedBy: userID,
+        });
 
         const data = await carUseCase.deleteCar(id);
 
