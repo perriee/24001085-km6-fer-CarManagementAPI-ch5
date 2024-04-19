@@ -31,6 +31,7 @@ exports.getTransmission = async (req, res, next) => {
 exports.createTransmission = async (req, res, next) => {
     try {
         const { name } = req.body;
+        const userID = req.user.id;
 
         // Request Validation
         if (!name || name == "") {
@@ -40,7 +41,10 @@ exports.createTransmission = async (req, res, next) => {
             });
         }
 
-        const data = await transmissionUseCase.createTransmission({ name });
+        const data = await transmissionUseCase.createTransmission({
+            name,
+            createdBy: userID,
+        });
 
         res.status(201).json({
             message: "Transmission created successfully",
@@ -55,6 +59,7 @@ exports.updateTransmission = async (req, res, next) => {
     try {
         const { id } = req.params;
         const { name } = req.body;
+        const userID = req.user.id;
 
         if (!name || name === "") {
             return next({
@@ -63,7 +68,10 @@ exports.updateTransmission = async (req, res, next) => {
             });
         }
 
-        const data = await transmissionUseCase.updateTransmission(id, { name });
+        const data = await transmissionUseCase.updateTransmission(id, {
+            name,
+            lastUpdatedBy: userID,
+        });
 
         res.status(200).json({
             message: `Successfully updated transmission with id ${id}`,
@@ -77,6 +85,11 @@ exports.updateTransmission = async (req, res, next) => {
 exports.deleteTransmission = async (req, res, next) => {
     try {
         const { id } = req.params;
+        const userID = req.user.id;
+
+        await transmissionUseCase.updateTransmission(id, {
+            deletedBy: userID,
+        });
 
         const data = await transmissionUseCase.deleteTransmission(id);
 
