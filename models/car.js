@@ -27,6 +27,7 @@ module.exports = (sequelize, DataTypes) => {
             plate: DataTypes.STRING,
             model: DataTypes.STRING,
             image: DataTypes.TEXT,
+            description: DataTypes.TEXT,
             rentPerDay: DataTypes.INTEGER,
             year: DataTypes.INTEGER,
             available: DataTypes.BOOLEAN,
@@ -34,6 +35,9 @@ module.exports = (sequelize, DataTypes) => {
             type_id: DataTypes.INTEGER,
             size_id: DataTypes.INTEGER,
             transmission_id: DataTypes.INTEGER,
+            createdBy: DataTypes.STRING,
+            deletedBy: DataTypes.STRING,
+            lastUpdatedBy: DataTypes.STRING,
         },
         {
             sequelize,

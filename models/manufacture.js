@@ -15,6 +15,9 @@ module.exports = (sequelize, DataTypes) => {
     Manufacture.init(
         {
             name: DataTypes.STRING,
+            createdBy: DataTypes.STRING,
+            deletedBy: DataTypes.STRING,
+            lastUpdatedBy: DataTypes.STRING,
         },
         {
             sequelize,

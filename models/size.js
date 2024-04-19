@@ -16,6 +16,9 @@ module.exports = (sequelize, DataTypes) => {
         {
             name: DataTypes.STRING,
             capacity: DataTypes.INTEGER,
+            createdBy: DataTypes.STRING,
+            deletedBy: DataTypes.STRING,
+            lastUpdatedBy: DataTypes.STRING,
         },
         {
             sequelize,
