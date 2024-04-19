@@ -8,7 +8,12 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 app.use(express.json()); // get body -> json
-app.use(fileUpload({ useTempFiles: true })); // get body -> form-data
+app.use(
+    fileUpload({
+        useTempFiles: true,
+        tempFileDir: process.env.NODE_ENV == "development" ? "./tmp" : "/tmp", // use this when you use GCP APP ENGINE
+    })
+); // get body -> form-data
 app.use(express.static("public"));
 
 app.use("/api", router);
