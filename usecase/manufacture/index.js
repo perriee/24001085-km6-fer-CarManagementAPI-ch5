@@ -1,5 +1,4 @@
 const manufactureRepo = require("../../repository/manufacture");
-const userRepo = require("../../repository/user");
 
 exports.getManufactures = async () => {
     const data = await manufactureRepo.getManufactures();

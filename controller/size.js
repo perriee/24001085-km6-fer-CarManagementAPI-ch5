@@ -31,6 +31,7 @@ exports.getSize = async (req, res, next) => {
 exports.createSize = async (req, res, next) => {
     try {
         const { name, capacity } = req.body;
+        const userID = req.user.id;
 
         // Request Validation
         if (!name || name == "") {
@@ -46,7 +47,11 @@ exports.createSize = async (req, res, next) => {
             });
         }
 
-        const data = await sizeUseCase.createSize({ name, capacity });
+        const data = await sizeUseCase.createSize({
+            name,
+            capacity,
+            createdBy: userID,
+        });
 
         res.status(201).json({
             message: "Size created successfully",
@@ -61,6 +66,7 @@ exports.updateSize = async (req, res, next) => {
     try {
         const { id } = req.params;
         const { name, capacity } = req.body;
+        const userID = req.user.id;
 
         if (!name || name === "") {
             return next({
@@ -75,7 +81,11 @@ exports.updateSize = async (req, res, next) => {
             });
         }
 
-        const data = await sizeUseCase.updateSize(id, { name, capacity });
+        const data = await sizeUseCase.updateSize(id, {
+            name,
+            capacity,
+            lastUpdatedBy: userID,
+        });
 
         res.status(200).json({
             message: `Successfully updated size with id ${id}`,
@@ -89,6 +99,11 @@ exports.updateSize = async (req, res, next) => {
 exports.deleteSize = async (req, res, next) => {
     try {
         const { id } = req.params;
+        const userID = req.user.id;
+
+        await sizeUseCase.updateSize(id, {
+            deletedBy: userID,
+        });
 
         const data = await sizeUseCase.deleteSize(id);
 
