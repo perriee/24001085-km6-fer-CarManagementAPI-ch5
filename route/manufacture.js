@@ -2,16 +2,17 @@ const express = require("express");
 const router = express.Router();
 
 const manufactureController = require("../controller/manufacture");
+const { authMiddleware } = require("../middleware/auth");
 
 router
     .route("/")
-    .get(manufactureController.getManufactures)
-    .post(manufactureController.createManufacture);
+    .get(authMiddleware(["user", "admin", "superadmin"]), manufactureController.getManufactures)
+    .post(authMiddleware(["admin", "superadmin"]), manufactureController.createManufacture);
 
 router
     .route("/:id")
-    .get(manufactureController.getManufacture)
-    .put(manufactureController.updateManufacture)
-    .delete(manufactureController.deleteManufacture);
+    .get(authMiddleware(["user", "admin", "superadmin"]), manufactureController.getManufacture)
+    .put(authMiddleware(["admin", "superadmin"]), manufactureController.updateManufacture)
+    .delete(authMiddleware(["admin", "superadmin"]), manufactureController.deleteManufacture);
 
 module.exports = router;

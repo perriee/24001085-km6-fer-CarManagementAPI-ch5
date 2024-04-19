@@ -2,7 +2,9 @@ const { Manufacture } = require("../../models");
 const { getDataRedis, setDataRedis, deleteDataRedis } = require("../../helper/redis");
 
 exports.getManufactures = async () => {
-    const data = await Manufacture.findAll();
+    const data = await Manufacture.findAll({
+        raw: true,
+    });
     return data;
 };
 

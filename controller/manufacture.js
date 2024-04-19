@@ -30,7 +30,8 @@ exports.getManufacture = async (req, res, next) => {
 
 exports.createManufacture = async (req, res, next) => {
     try {
-        const { name } = req.body;
+        const name = req.body.name;
+        const userID = req.user.id;
 
         // Request Validation
         if (!name || name == "") {
@@ -40,7 +41,10 @@ exports.createManufacture = async (req, res, next) => {
             });
         }
 
-        const data = await manufactureUseCase.createManufacture({ name });
+        const data = await manufactureUseCase.createManufacture({
+            name,
+            createdBy: userID,
+        });
 
         res.status(201).json({
             message: "Manufacture created successfully",
@@ -55,6 +59,7 @@ exports.updateManufacture = async (req, res, next) => {
     try {
         const { id } = req.params;
         const { name } = req.body;
+        const userID = req.user.id;
 
         if (!name || name === "") {
             return next({
@@ -63,7 +68,10 @@ exports.updateManufacture = async (req, res, next) => {
             });
         }
 
-        const data = await manufactureUseCase.updateManufacture(id, { name });
+        const data = await manufactureUseCase.updateManufacture(id, {
+            name,
+            lastUpdatedBy: userID,
+        });
 
         res.status(200).json({
             message: `Successfully updated manufacture with id ${id}`,
@@ -77,6 +85,11 @@ exports.updateManufacture = async (req, res, next) => {
 exports.deleteManufacture = async (req, res, next) => {
     try {
         const { id } = req.params;
+        const userID = req.user.id;
+
+        await manufactureUseCase.updateManufacture(id, {
+            deletedBy: userID,
+        });
 
         const data = await manufactureUseCase.deleteManufacture(id);
 

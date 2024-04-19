@@ -26,16 +26,34 @@ module.exports = {
                 type: Sequelize.DATE,
             },
             createdBy: {
-                type: Sequelize.STRING,
+                type: Sequelize.INTEGER,
                 allowNull: false,
+                references: {
+                    model: {
+                        tableName: "Users",
+                    },
+                    key: "id",
+                },
             },
             deletedBy: {
-                type: Sequelize.STRING,
+                type: Sequelize.INTEGER,
                 allowNull: true,
+                references: {
+                    model: {
+                        tableName: "Users",
+                    },
+                    key: "id",
+                },
             },
             lastUpdatedBy: {
-                type: Sequelize.STRING,
+                type: Sequelize.INTEGER,
                 allowNull: true,
+                references: {
+                    model: {
+                        tableName: "Users",
+                    },
+                    key: "id",
+                },
             },
         });
     },

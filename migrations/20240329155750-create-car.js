@@ -93,6 +93,36 @@ module.exports = {
                 allowNull: true,
                 type: Sequelize.DATE,
             },
+            createdBy: {
+                type: Sequelize.INTEGER,
+                allowNull: false,
+                references: {
+                    model: {
+                        tableName: "Users",
+                    },
+                    key: "id",
+                },
+            },
+            deletedBy: {
+                type: Sequelize.INTEGER,
+                allowNull: true,
+                references: {
+                    model: {
+                        tableName: "Users",
+                    },
+                    key: "id",
+                },
+            },
+            lastUpdatedBy: {
+                type: Sequelize.INTEGER,
+                allowNull: true,
+                references: {
+                    model: {
+                        tableName: "Users",
+                    },
+                    key: "id",
+                },
+            },
         });
     },
     async down(queryInterface, Sequelize) {

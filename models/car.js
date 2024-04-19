@@ -8,6 +8,15 @@ module.exports = (sequelize, DataTypes) => {
          * The `models/index` file will call this method automatically.
          */
         static associate(models) {
+            // CreatedBy
+            Car.belongsTo(models.User, { foreignKey: "createdBy" });
+
+            // DeletedBy
+            Car.belongsTo(models.User, { foreignKey: "deletedBy" });
+
+            // LastUpdatedBy
+            Car.belongsTo(models.User, { foreignKey: "lastUpdatedBy" });
+
             // Manufacture
             Car.belongsTo(models.Manufacture, { foreignKey: "manufacture_id" });
 
@@ -35,9 +44,9 @@ module.exports = (sequelize, DataTypes) => {
             type_id: DataTypes.INTEGER,
             size_id: DataTypes.INTEGER,
             transmission_id: DataTypes.INTEGER,
-            createdBy: DataTypes.STRING,
-            deletedBy: DataTypes.STRING,
-            lastUpdatedBy: DataTypes.STRING,
+            createdBy: DataTypes.INTEGER,
+            deletedBy: DataTypes.INTEGER,
+            lastUpdatedBy: DataTypes.INTEGER,
         },
         {
             sequelize,

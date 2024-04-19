@@ -8,6 +8,15 @@ module.exports = (sequelize, DataTypes) => {
          * The `models/index` file will call this method automatically.
          */
         static associate(models) {
+            // USER - CreatedBy
+            Manufacture.belongsTo(models.User, { foreignKey: "createdBy" });
+
+            // USER - DeletedBy
+            Manufacture.belongsTo(models.User, { foreignKey: "deletedBy" });
+
+            // USER - LastUpdatedBy
+            Manufacture.belongsTo(models.User, { foreignKey: "lastUpdatedBy" });
+
             // Car
             Manufacture.hasMany(models.Car, { foreignKey: "manufacture_id" });
         }
@@ -15,9 +24,9 @@ module.exports = (sequelize, DataTypes) => {
     Manufacture.init(
         {
             name: DataTypes.STRING,
-            createdBy: DataTypes.STRING,
-            deletedBy: DataTypes.STRING,
-            lastUpdatedBy: DataTypes.STRING,
+            createdBy: DataTypes.INTEGER,
+            deletedBy: DataTypes.INTEGER,
+            lastUpdatedBy: DataTypes.INTEGER,
         },
         {
             sequelize,

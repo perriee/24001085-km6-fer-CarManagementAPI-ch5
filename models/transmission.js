@@ -15,9 +15,9 @@ module.exports = (sequelize, DataTypes) => {
     Transmission.init(
         {
             name: DataTypes.STRING,
-            createdBy: DataTypes.STRING,
-            deletedBy: DataTypes.STRING,
-            lastUpdatedBy: DataTypes.STRING,
+            createdBy: DataTypes.INTEGER,
+            deletedBy: DataTypes.INTEGER,
+            lastUpdatedBy: DataTypes.INTEGER,
         },
         {
             sequelize,
