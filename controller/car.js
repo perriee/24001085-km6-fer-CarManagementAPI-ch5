@@ -329,7 +329,7 @@ exports.deleteCar = async (req, res, next) => {
         const { id } = req.params;
         const userID = req.user.id;
 
-        await carUseCase.deleteCar(id, {
+        await carUseCase.updateCar(id, {
             deletedBy: userID,
         });
 
