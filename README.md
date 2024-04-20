@@ -1,20 +1,13 @@
-## Car Management Dashboard
+## Car Management API
 
-Challenge Chapter 4 - Binar Academy
-
-![dashboard](public/images/dashboard.png)
-
-#### Dashboard Features
-- Showing All Cars
-- Filter Car by Size
-- Search Car by Name
-- Responsive Web Design
+Challenge Chapter 5 - Binar Academy
 
 ## ERDiagram
 
-![db diagram](public/images/ERD-Challenge-Chapter4.png)
+![db diagram](public/images/DBDiagram-CH5.png)
 
 ## Tech Stack
+- [Google Cloud Platform](https://cloud.google.com)
 - [Express.js](https://expressjs.com)
 - [Sequelize](https://sequelize.org/)
 - [Redis](https://redis.io/docs/)
@@ -27,7 +20,7 @@ Challenge Chapter 4 - Binar Academy
 #### 1. Clone Repository
 
 ```
-git clone https://github.com/perriee/24001085-km6-fer-CarManagementDashboard-ch4.git
+git clone https://github.com/perriee/24001085-km6-fer-CarManagementAPI-ch5.git
 ```
 
 #### 2. Install Dependencies
@@ -53,6 +46,23 @@ npm run dev
 by default server running in `localhost:3000`
 
 ## API Reference
+
+### User Endpoints
+superadmin, admin, and user login using the same endpoint, but differentiated based on their role
+
+| Route           | Method   | Description      |
+| --------------- | -------- | ---------------- |
+| `/api/auth/register`     | `POST`    | User register     |
+| `/api/auth/login`     | `POST`   | User login       |
+| `/api/auth/profile` | `GET`    | Get profile current user login    |
+
+### Admin Endpoints
+only user with role "superadmin" can make admin
+
+| Route           | Method   | Description      |
+| --------------- | -------- | ---------------- |
+| `/api/auth/admin`     | `POST`    | Create admin     |
+
 
 ### Car Endpoints
 
