@@ -4,7 +4,7 @@ Challenge Chapter 5 - Binar Academy
 
 ## ERDiagram
 
-![db diagram](public/images/DBDiagram-CH5.png)
+![db diagram](public/images/DBDiagramChallengeCh5-FSW2.png)
 
 ## Tech Stack
 - [Google Cloud Platform](https://cloud.google.com)
