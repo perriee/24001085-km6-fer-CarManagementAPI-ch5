@@ -51,6 +51,9 @@ by default server running in `localhost:3000`
 
 ## API Reference
 
+### Documentation
+https://documenter.getpostman.com/view/27037203/2sA3BoZX4j
+
 ### User Endpoints
 superadmin, admin, and user login using the same endpoint, but differentiated based on their role
 
