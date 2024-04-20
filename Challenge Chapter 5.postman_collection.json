@@ -2,6 +2,7 @@
 	"info": {
 		"_postman_id": "50b8284e-2c40-4de5-b1d0-c124faf75cb0",
 		"name": "Challenge Chapter 5",
+		"description": "Car Management API - Challenge Chapter 5 - Fullstack Web Development",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "27037203"
 	},
@@ -30,14 +31,95 @@
 							],
 							"query": [
 								{
-									"key": "size",
-									"value": "Medium",
+									"key": "",
+									"value": "",
 									"disabled": true
 								}
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{TOKEN}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/cars",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"cars"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"425-62rmEbGbEXfEJeRuA6GCjutiJfw\""
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "X-Cloud-Trace-Context",
+									"value": "70f06f592654ca39d4ad767da3997292;o=1"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 20 Apr 2024 03:28:35 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Google Frontend"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "private"
+								},
+								{
+									"key": "Alt-Svc",
+									"value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully retrieved all cars\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"Agya\",\n            \"plate\": \"KB 6677\",\n            \"model\": \"AG-12\",\n            \"image\": null,\n            \"description\": null,\n            \"rentPerDay\": 150000,\n            \"year\": 2022,\n            \"available\": true,\n            \"createdBy\": 1,\n            \"deletedBy\": null,\n            \"lastUpdatedBy\": null,\n            \"createdAt\": \"2024-04-19T16:11:11.381Z\",\n            \"updatedAt\": \"2024-04-19T16:11:11.381Z\",\n            \"deletedAt\": null,\n            \"User\": null,\n            \"Manufacture\": {\n                \"id\": 1,\n                \"name\": \"Toyota\"\n            },\n            \"Type\": {\n                \"id\": 1,\n                \"name\": \"Sedan\"\n            },\n            \"Size\": {\n                \"id\": 2,\n                \"name\": \"Medium\",\n                \"capacity\": 4\n            },\n            \"Transmission\": {\n                \"id\": 1,\n                \"name\": \"Matic\"\n            }\n        },\n        {\n            \"id\": 2,\n            \"name\": \"Gran Max\",\n            \"plate\": \"KT 8898\",\n            \"model\": \"GM-6\",\n            \"image\": \"https://res.cloudinary.com/dyxgesrbu/image/upload/v1713543172/6ffcf301568a5ace5b48ef769a58b2cf.jpg\",\n            \"description\": null,\n            \"rentPerDay\": 200000,\n            \"year\": 2021,\n            \"available\": true,\n            \"createdBy\": 1,\n            \"deletedBy\": null,\n            \"lastUpdatedBy\": null,\n            \"createdAt\": \"2024-04-19T16:12:53.096Z\",\n            \"updatedAt\": \"2024-04-19T16:12:53.096Z\",\n            \"deletedAt\": null,\n            \"User\": null,\n            \"Manufacture\": {\n                \"id\": 2,\n                \"name\": \"Daihatsu\"\n            },\n            \"Type\": {\n                \"id\": 3,\n                \"name\": \"Pickup\"\n            },\n            \"Size\": {\n                \"id\": 3,\n                \"name\": \"Large\",\n                \"capacity\": 6\n            },\n            \"Transmission\": {\n                \"id\": 3,\n                \"name\": \"Automatic\"\n            }\n        }\n    ]\n}"
+						}
+					]
 				},
 				{
 					"name": "Get car",
@@ -62,12 +144,161 @@
 							"variable": [
 								{
 									"key": "id",
-									"value": ""
+									"value": "2"
 								}
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{TOKEN}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/cars/:id",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"cars",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"265-PoL+xpZkJJSNj5J4D69p2b/2r9E\""
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "X-Cloud-Trace-Context",
+									"value": "d3f47d3b3b2465fc17af123207176544;o=1"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 20 Apr 2024 03:29:47 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Google Frontend"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "private"
+								},
+								{
+									"key": "Alt-Svc",
+									"value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully retrieved car with id 2\",\n    \"data\": {\n        \"id\": 2,\n        \"name\": \"Gran Max\",\n        \"plate\": \"KT 8898\",\n        \"model\": \"GM-6\",\n        \"image\": \"https://res.cloudinary.com/dyxgesrbu/image/upload/v1713543172/6ffcf301568a5ace5b48ef769a58b2cf.jpg\",\n        \"description\": null,\n        \"rentPerDay\": 200000,\n        \"year\": 2021,\n        \"available\": true,\n        \"createdBy\": 1,\n        \"deletedBy\": null,\n        \"lastUpdatedBy\": null,\n        \"createdAt\": \"2024-04-19T16:12:53.096Z\",\n        \"updatedAt\": \"2024-04-19T16:12:53.096Z\",\n        \"deletedAt\": null,\n        \"User\": null,\n        \"Manufacture\": {\n            \"id\": 2,\n            \"name\": \"Daihatsu\"\n        },\n        \"Type\": {\n            \"id\": 3,\n            \"name\": \"Pickup\"\n        },\n        \"Size\": {\n            \"id\": 3,\n            \"name\": \"Large\",\n            \"capacity\": 6\n        },\n        \"Transmission\": {\n            \"id\": 3,\n            \"name\": \"Automatic\"\n        }\n    }\n}"
+						},
+						{
+							"name": "error not found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{TOKEN}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/cars/:id",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"cars",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "4"
+										}
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"35-5ZvwIa8214608U0QekOt1tkvvwE\""
+								},
+								{
+									"key": "X-Cloud-Trace-Context",
+									"value": "25d1c271e01f438fb4abe6956e158bef;o=1"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 20 Apr 2024 03:30:08 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Google Frontend"
+								},
+								{
+									"key": "Content-Length",
+									"value": "53"
+								},
+								{
+									"key": "Alt-Svc",
+									"value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": null,\n    \"message\": \"Car with id 4 is not found!\"\n}"
+						}
+					]
 				},
 				{
 					"name": "Create car",
@@ -85,23 +316,23 @@
 							"formdata": [
 								{
 									"key": "name",
-									"value": "Grand Max Sayur",
+									"value": "Gran Max",
 									"type": "text"
 								},
 								{
 									"key": "plate",
-									"value": "AB 8789 HG",
+									"value": "KT 8898",
 									"type": "text"
 								},
 								{
 									"key": "model",
-									"value": "AB-4",
+									"value": "GM-6",
 									"type": "text"
 								},
 								{
 									"key": "image",
 									"type": "file",
-									"src": []
+									"src": "/C:/Users/LENOVO/OneDrive/Pictures/dummy-photos/grandmax.jpeg"
 								},
 								{
 									"key": "rentPerDay",
@@ -110,7 +341,7 @@
 								},
 								{
 									"key": "year",
-									"value": "2020",
+									"value": "2021",
 									"type": "text"
 								},
 								{
@@ -120,22 +351,22 @@
 								},
 								{
 									"key": "manufacture_id",
-									"value": "3",
-									"type": "text"
-								},
-								{
-									"key": "type_id",
-									"value": "4",
-									"type": "text"
-								},
-								{
-									"key": "size_id",
 									"value": "2",
 									"type": "text"
 								},
 								{
+									"key": "type_id",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "size_id",
+									"value": "3",
+									"type": "text"
+								},
+								{
 									"key": "transmission_id",
-									"value": "5",
+									"value": "3",
 									"type": "text"
 								}
 							]
@@ -150,7 +381,129 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{TOKEN}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "Fortuner",
+											"type": "text"
+										},
+										{
+											"key": "plate",
+											"value": "D 2938",
+											"type": "text"
+										},
+										{
+											"key": "model",
+											"value": "F-34",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/LENOVO/OneDrive/Pictures/dummy-photos/fortuner.png"
+										},
+										{
+											"key": "rentPerDay",
+											"value": "350000",
+											"type": "text"
+										},
+										{
+											"key": "year",
+											"value": "2023",
+											"type": "text"
+										},
+										{
+											"key": "available",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "manufacture_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "type_id",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "size_id",
+											"value": "3",
+											"type": "text"
+										},
+										{
+											"key": "transmission_id",
+											"value": "2",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/cars",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"cars"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"254-ez3Lewl7LYY0kMOskIh14O2EvPI\""
+								},
+								{
+									"key": "X-Cloud-Trace-Context",
+									"value": "c29e15d52a2af4ac9ab15a9853365e48;o=1"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 20 Apr 2024 03:37:19 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Google Frontend"
+								},
+								{
+									"key": "Content-Length",
+									"value": "596"
+								},
+								{
+									"key": "Alt-Svc",
+									"value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Car created successfully\",\n    \"data\": {\n        \"id\": 3,\n        \"name\": \"Fortuner\",\n        \"plate\": \"D 2938\",\n        \"model\": \"F-34\",\n        \"image\": \"https://res.cloudinary.com/dyxgesrbu/image/upload/v1713584238/1521ad75aee46b3db6f21bc608c61447.png\",\n        \"description\": null,\n        \"rentPerDay\": 350000,\n        \"year\": 2023,\n        \"available\": true,\n        \"createdBy\": 1,\n        \"deletedBy\": null,\n        \"lastUpdatedBy\": null,\n        \"createdAt\": \"2024-04-20T03:37:19.354Z\",\n        \"updatedAt\": \"2024-04-20T03:37:19.354Z\",\n        \"deletedAt\": null,\n        \"User\": null,\n        \"Manufacture\": {\n            \"id\": 1,\n            \"name\": \"Toyota\"\n        },\n        \"Type\": {\n            \"id\": 2,\n            \"name\": \"Minibus\"\n        },\n        \"Size\": {\n            \"id\": 3,\n            \"name\": \"Large\",\n            \"capacity\": 6\n        },\n        \"Transmission\": {\n            \"id\": 2,\n            \"name\": \"Manual\"\n        }\n    }\n}"
+						}
+					]
 				},
 				{
 					"name": "Update car",
@@ -168,57 +521,57 @@
 							"formdata": [
 								{
 									"key": "name",
-									"value": "Pajero Sport",
+									"value": "Gran Max Sayur",
 									"type": "text"
 								},
 								{
 									"key": "plate",
-									"value": "KB 1111 EM",
+									"value": "KT 8495 PL",
 									"type": "text"
 								},
 								{
 									"key": "model",
-									"value": "OR-23",
+									"value": "GM-9",
 									"type": "text"
 								},
 								{
 									"key": "image",
 									"type": "file",
-									"src": "/C:/Users/LENOVO/OneDrive/Pictures/dummy-photos/eren.jpg"
+									"src": "/C:/Users/LENOVO/OneDrive/Pictures/dummy-photos/grandmax.jpeg"
 								},
 								{
 									"key": "rentPerDay",
-									"value": "650000",
+									"value": "165000",
 									"type": "text"
 								},
 								{
 									"key": "year",
-									"value": "2021",
+									"value": "2022",
 									"type": "text"
 								},
 								{
 									"key": "available",
-									"value": "1",
+									"value": "0",
 									"type": "text"
 								},
 								{
 									"key": "manufacture_id",
-									"value": "3",
-									"type": "text"
-								},
-								{
-									"key": "type_id",
 									"value": "1",
 									"type": "text"
 								},
 								{
+									"key": "type_id",
+									"value": "2",
+									"type": "text"
+								},
+								{
 									"key": "size_id",
-									"value": "3",
+									"value": "4",
 									"type": "text"
 								},
 								{
 									"key": "transmission_id",
-									"value": "5",
+									"value": "1",
 									"type": "text"
 								}
 							]
@@ -235,12 +588,281 @@
 							"variable": [
 								{
 									"key": "id",
-									"value": "4"
+									"value": "3"
 								}
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{TOKEN}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "Fortuner Cross",
+											"type": "text"
+										},
+										{
+											"key": "plate",
+											"value": "D 2983",
+											"type": "text"
+										},
+										{
+											"key": "model",
+											"value": "F-34",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/LENOVO/OneDrive/Pictures/dummy-photos/fortuner.png"
+										},
+										{
+											"key": "rentPerDay",
+											"value": "550000",
+											"type": "text"
+										},
+										{
+											"key": "year",
+											"value": "2023",
+											"type": "text"
+										},
+										{
+											"key": "available",
+											"value": "0",
+											"type": "text"
+										},
+										{
+											"key": "manufacture_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "type_id",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "size_id",
+											"value": "3",
+											"type": "text"
+										},
+										{
+											"key": "transmission_id",
+											"value": "2",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/cars/:id",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"cars",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "3"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"256-vFXVtixu5KRbQqeE/55RmE0lm5I\""
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "X-Cloud-Trace-Context",
+									"value": "13d61595384476f0cc6a692de7724f4a;o=1"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 20 Apr 2024 03:46:36 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Google Frontend"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "private"
+								},
+								{
+									"key": "Alt-Svc",
+									"value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully updated car with id 3\",\n    \"data\": {\n        \"id\": 3,\n        \"name\": \"Fortuner Cross\",\n        \"plate\": \"D 2983\",\n        \"model\": \"F-34\",\n        \"image\": \"https://res.cloudinary.com/dyxgesrbu/image/upload/v1713584795/3342b4f19502c88698b0515e4a5b9067.png\",\n        \"description\": null,\n        \"rentPerDay\": 550000,\n        \"year\": 2023,\n        \"available\": false,\n        \"createdBy\": 1,\n        \"deletedBy\": null,\n        \"lastUpdatedBy\": 1,\n        \"createdAt\": \"2024-04-20T03:37:19.354Z\",\n        \"updatedAt\": \"2024-04-20T03:46:36.274Z\",\n        \"deletedAt\": null,\n        \"Manufacture\": {\n            \"id\": 1,\n            \"name\": \"Toyota\"\n        },\n        \"Type\": {\n            \"id\": 2,\n            \"name\": \"Minibus\"\n        },\n        \"Size\": {\n            \"id\": 3,\n            \"name\": \"Large\",\n            \"capacity\": 6\n        },\n        \"Transmission\": {\n            \"id\": 2,\n            \"name\": \"Manual\"\n        }\n    }\n}"
+						},
+						{
+							"name": "error not found",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{TOKEN}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "Fortuner Cross",
+											"type": "text"
+										},
+										{
+											"key": "plate",
+											"value": "D 2983",
+											"type": "text"
+										},
+										{
+											"key": "model",
+											"value": "F-34",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/LENOVO/OneDrive/Pictures/dummy-photos/fortuner.png"
+										},
+										{
+											"key": "rentPerDay",
+											"value": "550000",
+											"type": "text"
+										},
+										{
+											"key": "year",
+											"value": "2023",
+											"type": "text"
+										},
+										{
+											"key": "available",
+											"value": "0",
+											"type": "text"
+										},
+										{
+											"key": "manufacture_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "type_id",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "size_id",
+											"value": "3",
+											"type": "text"
+										},
+										{
+											"key": "transmission_id",
+											"value": "2",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/cars/:id",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"cars",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "7"
+										}
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"35-O3uXxrEvjC3wbelyHUTfuoywryI\""
+								},
+								{
+									"key": "X-Cloud-Trace-Context",
+									"value": "3dd7a8a366b586b37aae9173a4f74c4e;o=1"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 20 Apr 2024 04:11:43 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Google Frontend"
+								},
+								{
+									"key": "Content-Length",
+									"value": "53"
+								},
+								{
+									"key": "Alt-Svc",
+									"value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": null,\n    \"message\": \"Car with id 7 is not found!\"\n}"
+						}
+					]
 				},
 				{
 					"name": "Delete car",
@@ -270,9 +892,159 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{TOKEN}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/cars/:id",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"cars",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3c-In4F8rhP6hYb8klEUoQ+qrp9SkA\""
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "X-Cloud-Trace-Context",
+									"value": "4533fdbee18f8290c131c731c76e0c09;o=1"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 20 Apr 2024 04:02:55 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Google Frontend"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "private"
+								},
+								{
+									"key": "Alt-Svc",
+									"value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully deleted car with id 1\",\n    \"data\": null\n}"
+						},
+						{
+							"name": "error not found",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{TOKEN}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/cars/:id",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"cars",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "6"
+										}
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"34-itIRuzrZ9ST2AD0upBZgRuxDbcM\""
+								},
+								{
+									"key": "X-Cloud-Trace-Context",
+									"value": "f9fdeab2f08bce664e484795234b99c0;o=1"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 20 Apr 2024 03:47:48 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Google Frontend"
+								},
+								{
+									"key": "Content-Length",
+									"value": "52"
+								},
+								{
+									"key": "Alt-Svc",
+									"value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": null,\n    \"message\": \"Car with id 6 is not found\"\n}"
+						}
+					]
 				}
-			]
+			],
+			"description": "Management data car"
 		},
 		{
 			"name": "manufactures",
@@ -298,7 +1070,81 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{TOKEN}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/manufactures",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"manufactures"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"195-8OrhwPbqkCPM4afGyJ4JCavWbBg\""
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "X-Cloud-Trace-Context",
+									"value": "45d3edc84e6ad3f088e96259cad8be8e;o=1"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 20 Apr 2024 04:03:42 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Google Frontend"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "private"
+								},
+								{
+									"key": "Alt-Svc",
+									"value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully retrieved all manufactures\",\n    \"data\": [\n        {\n            \"id\": 2,\n            \"name\": \"Daihatsu\",\n            \"createdBy\": 1,\n            \"deletedBy\": null,\n            \"lastUpdatedBy\": null,\n            \"createdAt\": \"2024-04-19T16:06:04.022Z\",\n            \"updatedAt\": \"2024-04-19T16:06:04.022Z\",\n            \"deletedAt\": null\n        },\n        {\n            \"id\": 1,\n            \"name\": \"Toyota\",\n            \"createdBy\": 1,\n            \"deletedBy\": null,\n            \"lastUpdatedBy\": 1,\n            \"createdAt\": \"2024-04-19T16:05:45.874Z\",\n            \"updatedAt\": \"2024-04-19T16:06:50.148Z\",\n            \"deletedAt\": null\n        }\n    ]\n}"
+						}
+					]
 				},
 				{
 					"name": "Get manufacture",
@@ -328,7 +1174,156 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{TOKEN}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/manufactures/:id",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"manufactures",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"ea-CJsshCWLZuKJJSwnA8V8iuL29sE\""
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "X-Cloud-Trace-Context",
+									"value": "a5746fbb5686a85d73bdd9352f4a306c;o=1"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 20 Apr 2024 04:04:01 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Google Frontend"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "private"
+								},
+								{
+									"key": "Alt-Svc",
+									"value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully retrieved manufacture with id 1\",\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"Toyota\",\n        \"createdBy\": 1,\n        \"deletedBy\": null,\n        \"lastUpdatedBy\": 1,\n        \"createdAt\": \"2024-04-19T16:05:45.874Z\",\n        \"updatedAt\": \"2024-04-19T16:06:50.148Z\",\n        \"deletedAt\": null\n    }\n}"
+						},
+						{
+							"name": "error not found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{TOKEN}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/manufactures/:id",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"manufactures",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "5"
+										}
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3d-bO9wrp1ECXR6ji8s3X1C+RYbtMM\""
+								},
+								{
+									"key": "X-Cloud-Trace-Context",
+									"value": "6102ddb3206365297f4b3d18772abf74;o=1"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 20 Apr 2024 04:04:27 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Google Frontend"
+								},
+								{
+									"key": "Content-Length",
+									"value": "61"
+								},
+								{
+									"key": "Alt-Svc",
+									"value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": null,\n    \"message\": \"Manufacture with id 5 is not found!\"\n}"
+						}
+					]
 				},
 				{
 					"name": "Create manufacture",
@@ -360,7 +1355,78 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{TOKEN}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Honda\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/manufactures",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"manufactures"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"e0-+zVADJVMUoTv9SymlnV5DDLoOxY\""
+								},
+								{
+									"key": "X-Cloud-Trace-Context",
+									"value": "137060dbb968fd631c249b3c2d558ba9;o=1"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 20 Apr 2024 04:05:50 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Google Frontend"
+								},
+								{
+									"key": "Content-Length",
+									"value": "224"
+								},
+								{
+									"key": "Alt-Svc",
+									"value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Manufacture created successfully\",\n    \"data\": {\n        \"id\": 4,\n        \"name\": \"Honda\",\n        \"createdBy\": 1,\n        \"updatedAt\": \"2024-04-20T04:05:50.648Z\",\n        \"createdAt\": \"2024-04-20T04:05:50.648Z\",\n        \"deletedBy\": null,\n        \"lastUpdatedBy\": null,\n        \"deletedAt\": null\n    }\n}"
+						}
+					]
 				},
 				{
 					"name": "Update manufacture",
@@ -399,7 +1465,174 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{TOKEN}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Hondi\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/manufactures/:id",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"manufactures",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "4"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"e7-3dM0/2H8WgTjJ2WQVgILwCtfRb0\""
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "X-Cloud-Trace-Context",
+									"value": "c3156ff0cef1ba86aba7dcbedb62c482;o=1"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 20 Apr 2024 04:07:26 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Google Frontend"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "private"
+								},
+								{
+									"key": "Alt-Svc",
+									"value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully updated manufacture with id 4\",\n    \"data\": {\n        \"id\": 4,\n        \"name\": \"Hondi\",\n        \"createdBy\": 1,\n        \"deletedBy\": null,\n        \"lastUpdatedBy\": 1,\n        \"createdAt\": \"2024-04-20T04:05:50.648Z\",\n        \"updatedAt\": \"2024-04-20T04:07:26.185Z\",\n        \"deletedAt\": null\n    }\n}"
+						},
+						{
+							"name": "error not found",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{TOKEN}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Hondi\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/manufactures/:id",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"manufactures",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "8"
+										}
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3d-Mpmxh4eYuE77NXClV6uT6lhva2c\""
+								},
+								{
+									"key": "X-Cloud-Trace-Context",
+									"value": "d26c86ffc45cb2b4de8f2045906ed50e;o=1"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 20 Apr 2024 04:11:14 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Google Frontend"
+								},
+								{
+									"key": "Content-Length",
+									"value": "61"
+								},
+								{
+									"key": "Alt-Svc",
+									"value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": null,\n    \"message\": \"Manufacture with id 8 is not found!\"\n}"
+						}
+					]
 				},
 				{
 					"name": "Delete manufacture",
@@ -429,7 +1662,156 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{TOKEN}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/manufactures/:id",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"manufactures",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "4"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"44-ljjHWOpexZtMWy9fMMJ6PHGCEdQ\""
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "X-Cloud-Trace-Context",
+									"value": "e0c331dd3109f449bb1c81e09041f57c;o=1"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 20 Apr 2024 04:08:07 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Google Frontend"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "private"
+								},
+								{
+									"key": "Alt-Svc",
+									"value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully deleted manufacture with id 4\",\n    \"data\": null\n}"
+						},
+						{
+							"name": "error not found",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{TOKEN}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/manufactures/:id",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"manufactures",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "6"
+										}
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3d-xYYySfYzUZP8I32j5b7Y2lrbFPs\""
+								},
+								{
+									"key": "X-Cloud-Trace-Context",
+									"value": "1cf1d3de463d7e12033eee2d9969bcc5;o=1"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 20 Apr 2024 04:07:45 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Google Frontend"
+								},
+								{
+									"key": "Content-Length",
+									"value": "61"
+								},
+								{
+									"key": "Alt-Svc",
+									"value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": null,\n    \"message\": \"Manufacture with id 6 is not found!\"\n}"
+						}
+					]
 				}
 			]
 		},
@@ -457,7 +1839,81 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{TOKEN}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/types",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"types"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"23b-2oi3H5PlgYm8siYxfHTPjkYi4iI\""
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "X-Cloud-Trace-Context",
+									"value": "39e6c938fbe763837445be2cc07ea621;o=1"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 20 Apr 2024 04:08:32 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Google Frontend"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "private"
+								},
+								{
+									"key": "Alt-Svc",
+									"value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully retrieved all types\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"Sedan\",\n            \"createdBy\": 1,\n            \"deletedBy\": null,\n            \"lastUpdatedBy\": null,\n            \"createdAt\": \"2024-04-19T16:07:00.784Z\",\n            \"updatedAt\": \"2024-04-19T16:07:00.784Z\",\n            \"deletedAt\": null\n        },\n        {\n            \"id\": 2,\n            \"name\": \"Minibus\",\n            \"createdBy\": 1,\n            \"deletedBy\": null,\n            \"lastUpdatedBy\": null,\n            \"createdAt\": \"2024-04-19T16:07:03.967Z\",\n            \"updatedAt\": \"2024-04-19T16:07:03.967Z\",\n            \"deletedAt\": null\n        },\n        {\n            \"id\": 3,\n            \"name\": \"Pickup\",\n            \"createdBy\": 1,\n            \"deletedBy\": null,\n            \"lastUpdatedBy\": null,\n            \"createdAt\": \"2024-04-19T16:07:07.839Z\",\n            \"updatedAt\": \"2024-04-19T16:07:07.839Z\",\n            \"deletedAt\": null\n        }\n    ]\n}"
+						}
+					]
 				},
 				{
 					"name": "Get type",
@@ -487,7 +1943,156 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{TOKEN}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/types/:id",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"types",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"e7-fhrQQ9oe7EaPbHDhH6CCaVWq9oo\""
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "X-Cloud-Trace-Context",
+									"value": "7ce67fa268b8f1a74a038ba2089351ad;o=1"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 20 Apr 2024 04:08:56 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Google Frontend"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "private"
+								},
+								{
+									"key": "Alt-Svc",
+									"value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully retrieved type with id 2\",\n    \"data\": {\n        \"id\": 2,\n        \"name\": \"Minibus\",\n        \"createdBy\": 1,\n        \"deletedBy\": null,\n        \"lastUpdatedBy\": null,\n        \"createdAt\": \"2024-04-19T16:07:03.967Z\",\n        \"updatedAt\": \"2024-04-19T16:07:03.967Z\",\n        \"deletedAt\": null\n    }\n}"
+						},
+						{
+							"name": "error not found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{TOKEN}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/types/:id",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"types",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "6"
+										}
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"36-4de6jl+M86iJs++cd7gcLU98fZs\""
+								},
+								{
+									"key": "X-Cloud-Trace-Context",
+									"value": "630838d62374cdaeaaf99c0f31578443;o=1"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 20 Apr 2024 04:09:14 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Google Frontend"
+								},
+								{
+									"key": "Content-Length",
+									"value": "54"
+								},
+								{
+									"key": "Alt-Svc",
+									"value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": null,\n    \"message\": \"Type with id 6 is not found!\"\n}"
+						}
+					]
 				},
 				{
 					"name": "Create type",
@@ -519,7 +2124,78 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{TOKEN}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Bus\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/types",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"types"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"d7-eX7NbaDLT2kyctc+qI05gDLCCzM\""
+								},
+								{
+									"key": "X-Cloud-Trace-Context",
+									"value": "e81d3af91c599ee4215c6463910aafbf;o=1"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 20 Apr 2024 04:09:40 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Google Frontend"
+								},
+								{
+									"key": "Content-Length",
+									"value": "215"
+								},
+								{
+									"key": "Alt-Svc",
+									"value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Type created successfully\",\n    \"data\": {\n        \"id\": 4,\n        \"name\": \"Bus\",\n        \"createdBy\": 1,\n        \"updatedAt\": \"2024-04-20T04:09:40.851Z\",\n        \"createdAt\": \"2024-04-20T04:09:40.851Z\",\n        \"deletedBy\": null,\n        \"lastUpdatedBy\": null,\n        \"deletedAt\": null\n    }\n}"
+						}
+					]
 				},
 				{
 					"name": "Update type",
@@ -558,7 +2234,174 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{TOKEN}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Bis\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/types/:id",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"types",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "4"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"de-1o+I7+OWTqFEcwhPMw5sFVPkJzk\""
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "X-Cloud-Trace-Context",
+									"value": "86f50a3d664ef48003ba17ed4916e674;o=1"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 20 Apr 2024 04:10:19 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Google Frontend"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "private"
+								},
+								{
+									"key": "Alt-Svc",
+									"value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully updated type with id 4\",\n    \"data\": {\n        \"id\": 4,\n        \"name\": \"Bis\",\n        \"createdBy\": 1,\n        \"deletedBy\": null,\n        \"lastUpdatedBy\": 1,\n        \"createdAt\": \"2024-04-20T04:09:40.851Z\",\n        \"updatedAt\": \"2024-04-20T04:10:19.089Z\",\n        \"deletedAt\": null\n    }\n}"
+						},
+						{
+							"name": "error not found",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{TOKEN}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Bis\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/types/:id",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"types",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "7"
+										}
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"36-Uho5KxiTpATy5+6CLX4PXPPtwm0\""
+								},
+								{
+									"key": "X-Cloud-Trace-Context",
+									"value": "bee538c1dd4b1b6d3074bb384d6d3527;o=1"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 20 Apr 2024 04:10:47 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Google Frontend"
+								},
+								{
+									"key": "Content-Length",
+									"value": "54"
+								},
+								{
+									"key": "Alt-Svc",
+									"value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": null,\n    \"message\": \"Type with id 7 is not found!\"\n}"
+						}
+					]
 				},
 				{
 					"name": "Delete type",
@@ -588,7 +2431,156 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{TOKEN}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/types/:id",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"types",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "4"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3d-QtMUjM/SpHpmVaxnV+qLlqygOtU\""
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "X-Cloud-Trace-Context",
+									"value": "aa9f3e6f8aaa6498e1b2e90782c4d61f;o=1"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 20 Apr 2024 04:12:15 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Google Frontend"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "private"
+								},
+								{
+									"key": "Alt-Svc",
+									"value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully deleted type with id 4\",\n    \"data\": null\n}"
+						},
+						{
+							"name": "error not found",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{TOKEN}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/types/:id",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"types",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "6"
+										}
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"36-4de6jl+M86iJs++cd7gcLU98fZs\""
+								},
+								{
+									"key": "X-Cloud-Trace-Context",
+									"value": "e9545f281c5a3008728df36d7eb86f98;o=1"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 20 Apr 2024 04:12:37 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Google Frontend"
+								},
+								{
+									"key": "Content-Length",
+									"value": "54"
+								},
+								{
+									"key": "Alt-Svc",
+									"value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": null,\n    \"message\": \"Type with id 6 is not found!\"\n}"
+						}
+					]
 				}
 			]
 		},
@@ -616,7 +2608,81 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{TOKEN}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/sizes",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"sizes"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"260-FAB8Q5qL6GmKAWnMauGKFSrUWu8\""
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "X-Cloud-Trace-Context",
+									"value": "9c93aa8ad04452bb0a895ae32486940c;o=1"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 20 Apr 2024 04:13:06 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Google Frontend"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "private"
+								},
+								{
+									"key": "Alt-Svc",
+									"value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully retrieved all sizes\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"Small\",\n            \"capacity\": 2,\n            \"createdBy\": 1,\n            \"deletedBy\": null,\n            \"lastUpdatedBy\": null,\n            \"createdAt\": \"2024-04-19T16:08:30.298Z\",\n            \"updatedAt\": \"2024-04-19T16:08:30.298Z\",\n            \"deletedAt\": null\n        },\n        {\n            \"id\": 2,\n            \"name\": \"Medium\",\n            \"capacity\": 4,\n            \"createdBy\": 1,\n            \"deletedBy\": null,\n            \"lastUpdatedBy\": null,\n            \"createdAt\": \"2024-04-19T16:08:36.902Z\",\n            \"updatedAt\": \"2024-04-19T16:08:36.902Z\",\n            \"deletedAt\": null\n        },\n        {\n            \"id\": 3,\n            \"name\": \"Large\",\n            \"capacity\": 6,\n            \"createdBy\": 1,\n            \"deletedBy\": null,\n            \"lastUpdatedBy\": null,\n            \"createdAt\": \"2024-04-19T16:08:41.729Z\",\n            \"updatedAt\": \"2024-04-19T16:08:41.729Z\",\n            \"deletedAt\": null\n        }\n    ]\n}"
+						}
+					]
 				},
 				{
 					"name": "Get size",
@@ -646,7 +2712,156 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{TOKEN}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/sizes/:id",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"sizes",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "3"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"f2-jwsayn/+O/Rx9PAgIlxIFZrMV/8\""
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "X-Cloud-Trace-Context",
+									"value": "b91cbd9795c188d698edba5beda4cc1c;o=1"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 20 Apr 2024 04:13:33 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Google Frontend"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "private"
+								},
+								{
+									"key": "Alt-Svc",
+									"value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully retrieved size with id 3\",\n    \"data\": {\n        \"id\": 3,\n        \"name\": \"Large\",\n        \"capacity\": 6,\n        \"createdBy\": 1,\n        \"deletedBy\": null,\n        \"lastUpdatedBy\": null,\n        \"createdAt\": \"2024-04-19T16:08:41.729Z\",\n        \"updatedAt\": \"2024-04-19T16:08:41.729Z\",\n        \"deletedAt\": null\n    }\n}"
+						},
+						{
+							"name": "error not found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{TOKEN}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/sizes/:id",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"sizes",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "6"
+										}
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"36-zxLfkJ+5BfRM65Rsh2xXFagOV+w\""
+								},
+								{
+									"key": "X-Cloud-Trace-Context",
+									"value": "bbeece4eed1ab6e6f2ab0511b86f80b9;o=1"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 20 Apr 2024 04:13:54 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Google Frontend"
+								},
+								{
+									"key": "Content-Length",
+									"value": "54"
+								},
+								{
+									"key": "Alt-Svc",
+									"value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": null,\n    \"message\": \"Size with id 6 is not found!\"\n}"
+						}
+					]
 				},
 				{
 					"name": "Create size",
@@ -678,7 +2893,78 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{TOKEN}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Extra Large\",\r\n    \"capacity\": 10\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/sizes",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"sizes"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"ed-YLI5LmiQS3dXN+gmXoiyap/QJWY\""
+								},
+								{
+									"key": "X-Cloud-Trace-Context",
+									"value": "fe6da341cbabccbd7946e21da761ead2;o=1"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 20 Apr 2024 04:14:26 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Google Frontend"
+								},
+								{
+									"key": "Content-Length",
+									"value": "237"
+								},
+								{
+									"key": "Alt-Svc",
+									"value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Size created successfully\",\n    \"data\": {\n        \"id\": 4,\n        \"name\": \"Extra Large\",\n        \"capacity\": 10,\n        \"createdBy\": 1,\n        \"updatedAt\": \"2024-04-20T04:14:26.811Z\",\n        \"createdAt\": \"2024-04-20T04:14:26.811Z\",\n        \"deletedBy\": null,\n        \"lastUpdatedBy\": null,\n        \"deletedAt\": null\n    }\n}"
+						}
+					]
 				},
 				{
 					"name": "Update size",
@@ -717,7 +3003,174 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{TOKEN}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Extra Large Updated\",\r\n    \"capacity\": 12\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/sizes/:id",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"sizes",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "4"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"fc-w9/S5W6IRbE9OvlztEE6TyX6mqs\""
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "X-Cloud-Trace-Context",
+									"value": "dbd8c48147298573d8aa5488e0dd0337;o=1"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 20 Apr 2024 04:15:21 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Google Frontend"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "private"
+								},
+								{
+									"key": "Alt-Svc",
+									"value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully updated size with id 4\",\n    \"data\": {\n        \"id\": 4,\n        \"name\": \"Extra Large Updated\",\n        \"capacity\": 12,\n        \"createdBy\": 1,\n        \"deletedBy\": null,\n        \"lastUpdatedBy\": 1,\n        \"createdAt\": \"2024-04-20T04:14:26.811Z\",\n        \"updatedAt\": \"2024-04-20T04:15:21.611Z\",\n        \"deletedAt\": null\n    }\n}"
+						},
+						{
+							"name": "error not found",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{TOKEN}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Extra Large Updated\",\r\n    \"capacity\": 12\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/sizes/:id",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"sizes",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "7"
+										}
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"36-tEY9dfttpCUMG9C2AURxwyg9wog\""
+								},
+								{
+									"key": "X-Cloud-Trace-Context",
+									"value": "5b6745337d189e1db074fff5f7d096df;o=1"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 20 Apr 2024 04:15:46 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Google Frontend"
+								},
+								{
+									"key": "Content-Length",
+									"value": "54"
+								},
+								{
+									"key": "Alt-Svc",
+									"value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": null,\n    \"message\": \"Size with id 7 is not found!\"\n}"
+						}
+					]
 				},
 				{
 					"name": "Delete size",
@@ -747,7 +3200,156 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{TOKEN}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/sizes/:id",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"sizes",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "4"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3d-eY7MlKJXlCY2zHxepudVoZ0YBT0\""
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "X-Cloud-Trace-Context",
+									"value": "982da9551c8a4431578d7d57b5ccc781;o=1"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 20 Apr 2024 04:16:21 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Google Frontend"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "private"
+								},
+								{
+									"key": "Alt-Svc",
+									"value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully deleted size with id 4\",\n    \"data\": null\n}"
+						},
+						{
+							"name": "error not found",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{TOKEN}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/sizes/:id",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"sizes",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "5"
+										}
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"36-rpT6yUPtrZda7DJRirMgTQQcGVA\""
+								},
+								{
+									"key": "X-Cloud-Trace-Context",
+									"value": "4a22eb3ade00f6ba4a4ba7ec29e5b686;o=1"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 20 Apr 2024 04:16:40 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Google Frontend"
+								},
+								{
+									"key": "Content-Length",
+									"value": "54"
+								},
+								{
+									"key": "Alt-Svc",
+									"value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": null,\n    \"message\": \"Size with id 5 is not found!\"\n}"
+						}
+					]
 				}
 			]
 		},
@@ -775,7 +3377,81 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{TOKEN}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/transmissions",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"transmissions"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2f5-z/4kbln1D66r+LbR3wswErJZCDE\""
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "X-Cloud-Trace-Context",
+									"value": "b3170b95e61e1131a436392e7432c459;o=1"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 20 Apr 2024 04:17:31 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Google Frontend"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "private"
+								},
+								{
+									"key": "Alt-Svc",
+									"value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully retrieved all transmissions\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"Matic\",\n            \"createdBy\": 1,\n            \"deletedBy\": null,\n            \"lastUpdatedBy\": null,\n            \"createdAt\": \"2024-04-19T16:08:55.642Z\",\n            \"updatedAt\": \"2024-04-19T16:08:55.642Z\",\n            \"deletedAt\": null\n        },\n        {\n            \"id\": 2,\n            \"name\": \"Manual\",\n            \"createdBy\": 1,\n            \"deletedBy\": null,\n            \"lastUpdatedBy\": null,\n            \"createdAt\": \"2024-04-19T16:08:59.007Z\",\n            \"updatedAt\": \"2024-04-19T16:08:59.007Z\",\n            \"deletedAt\": null\n        },\n        {\n            \"id\": 3,\n            \"name\": \"Automatic\",\n            \"createdBy\": 1,\n            \"deletedBy\": null,\n            \"lastUpdatedBy\": null,\n            \"createdAt\": \"2024-04-19T16:09:02.342Z\",\n            \"updatedAt\": \"2024-04-19T16:09:02.342Z\",\n            \"deletedAt\": null\n        },\n        {\n            \"id\": 4,\n            \"name\": \"Automanual\",\n            \"createdBy\": 1,\n            \"deletedBy\": null,\n            \"lastUpdatedBy\": null,\n            \"createdAt\": \"2024-04-19T16:09:07.150Z\",\n            \"updatedAt\": \"2024-04-19T16:09:07.150Z\",\n            \"deletedAt\": null\n        }\n    ]\n}"
+						}
+					]
 				},
 				{
 					"name": "Get transmission",
@@ -805,7 +3481,156 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{TOKEN}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/transmissions/:id",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"transmissions",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "4"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"f2-rPwHW0EyI9FMY36yJ4eQF6K4rpY\""
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "X-Cloud-Trace-Context",
+									"value": "d1c2ddea06eae220b411152e9c273e70;o=1"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 20 Apr 2024 04:18:09 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Google Frontend"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "private"
+								},
+								{
+									"key": "Alt-Svc",
+									"value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully retrieved transmission with id 4\",\n    \"data\": {\n        \"id\": 4,\n        \"name\": \"Automanual\",\n        \"createdBy\": 1,\n        \"deletedBy\": null,\n        \"lastUpdatedBy\": null,\n        \"createdAt\": \"2024-04-19T16:09:07.150Z\",\n        \"updatedAt\": \"2024-04-19T16:09:07.150Z\",\n        \"deletedAt\": null\n    }\n}"
+						},
+						{
+							"name": "error not found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{TOKEN}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/transmissions/:id",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"transmissions",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "6"
+										}
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3e-K1weZv+OzmuEUaMrVjhr7lQvBOg\""
+								},
+								{
+									"key": "X-Cloud-Trace-Context",
+									"value": "e32f6d8e934137f7a71eb5a0c1b1dcef;o=1"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 20 Apr 2024 04:18:33 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Google Frontend"
+								},
+								{
+									"key": "Content-Length",
+									"value": "62"
+								},
+								{
+									"key": "Alt-Svc",
+									"value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": null,\n    \"message\": \"Transmission with id 6 is not found!\"\n}"
+						}
+					]
 				},
 				{
 					"name": "Create transmission",
@@ -837,7 +3662,78 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{TOKEN}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Automanualmatic\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/transmissions",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"transmissions"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"eb-1VQrH3LhUMLhR+j7AQ0V2O5Xsy8\""
+								},
+								{
+									"key": "X-Cloud-Trace-Context",
+									"value": "3a19a0f7e246f3c6b9f031f8e6703f4d;o=1"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 20 Apr 2024 04:19:12 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Google Frontend"
+								},
+								{
+									"key": "Content-Length",
+									"value": "235"
+								},
+								{
+									"key": "Alt-Svc",
+									"value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Transmission created successfully\",\n    \"data\": {\n        \"id\": 5,\n        \"name\": \"Automanualmatic\",\n        \"createdBy\": 1,\n        \"updatedAt\": \"2024-04-20T04:19:12.024Z\",\n        \"createdAt\": \"2024-04-20T04:19:12.024Z\",\n        \"deletedBy\": null,\n        \"lastUpdatedBy\": null,\n        \"deletedAt\": null\n    }\n}"
+						}
+					]
 				},
 				{
 					"name": "Update transmission",
@@ -876,7 +3772,174 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{TOKEN}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Autometikmanual\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/transmissions/:id",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"transmissions",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "5"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"f2-BC31Xg4LJEkgl0FG+qJsQm5OVUc\""
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "X-Cloud-Trace-Context",
+									"value": "177ab33da07b77c0d2c2a2c625a14cd9;o=1"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 20 Apr 2024 04:19:56 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Google Frontend"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "private"
+								},
+								{
+									"key": "Alt-Svc",
+									"value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully updated transmission with id 5\",\n    \"data\": {\n        \"id\": 5,\n        \"name\": \"Autometikmanual\",\n        \"createdBy\": 1,\n        \"deletedBy\": null,\n        \"lastUpdatedBy\": 1,\n        \"createdAt\": \"2024-04-20T04:19:12.024Z\",\n        \"updatedAt\": \"2024-04-20T04:19:56.724Z\",\n        \"deletedAt\": null\n    }\n}"
+						},
+						{
+							"name": "error not found",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{TOKEN}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Autometikmanual\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/transmissions/:id",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"transmissions",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "6"
+										}
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3e-K1weZv+OzmuEUaMrVjhr7lQvBOg\""
+								},
+								{
+									"key": "X-Cloud-Trace-Context",
+									"value": "c78ccdaf9df4092d180f9f41439c2f9f;o=1"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 20 Apr 2024 04:20:24 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Google Frontend"
+								},
+								{
+									"key": "Content-Length",
+									"value": "62"
+								},
+								{
+									"key": "Alt-Svc",
+									"value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": null,\n    \"message\": \"Transmission with id 6 is not found!\"\n}"
+						}
+					]
 				},
 				{
 					"name": "Delete transmission",
@@ -906,7 +3969,156 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{TOKEN}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/transmissions/:id",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"transmissions",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "5"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"45-CSQ+LNmStmC3zOKEF3YamQkftVM\""
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "X-Cloud-Trace-Context",
+									"value": "fee94f96c776ddd7b5871f945dbc339c;o=1"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 20 Apr 2024 04:21:19 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Google Frontend"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "private"
+								},
+								{
+									"key": "Alt-Svc",
+									"value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully deleted transmission with id 5\",\n    \"data\": null\n}"
+						},
+						{
+							"name": "error not found",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{TOKEN}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/transmissions/:id",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"transmissions",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "7"
+										}
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3e-t97KpgBR72g0p3j6Q22EcTEKxq8\""
+								},
+								{
+									"key": "X-Cloud-Trace-Context",
+									"value": "5188db89848396205ffd1fd5ddf70860;o=1"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 20 Apr 2024 04:21:46 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Google Frontend"
+								},
+								{
+									"key": "Content-Length",
+									"value": "62"
+								},
+								{
+									"key": "Alt-Svc",
+									"value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": null,\n    \"message\": \"Transmission with id 7 is not found!\"\n}"
+						}
+					]
 				}
 			]
 		},
@@ -923,37 +4135,201 @@
 							"formdata": [
 								{
 									"key": "email",
-									"value": "jarjit@gmail.com",
+									"value": "nanang@gmail.com",
 									"type": "text"
 								},
 								{
 									"key": "password",
-									"value": "jarjit123",
+									"value": "nanang123",
 									"type": "text"
 								},
 								{
 									"key": "name",
-									"value": "Jarjit",
+									"value": "Nanang",
 									"type": "text"
 								},
 								{
 									"key": "photo",
-									"value": "",
-									"type": "text"
+									"type": "file",
+									"src": "/C:/Users/LENOVO/OneDrive/Pictures/dummy-photos/eren.jpg"
 								}
 							]
 						},
 						"url": {
-							"raw": "{{base_url}}/register",
+							"raw": "{{base_url}}/auth/register",
 							"host": [
 								"{{base_url}}"
 							],
 							"path": [
+								"auth",
 								"register"
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "mael@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "mael123",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "Mael",
+											"type": "text"
+										},
+										{
+											"key": "photo",
+											"type": "file",
+											"src": "/C:/Users/LENOVO/OneDrive/Pictures/dummy-photos/mael.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/auth/register",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"auth",
+										"register"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1d5-62Mlkn3VSHeGlzlPmbX8wjtSfxw\""
+								},
+								{
+									"key": "X-Cloud-Trace-Context",
+									"value": "3fe3a7568a2e6598a999e9813777f376;o=1"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 20 Apr 2024 04:38:14 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Google Frontend"
+								},
+								{
+									"key": "Content-Length",
+									"value": "469"
+								},
+								{
+									"key": "Alt-Svc",
+									"value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"User created successfully\",\n    \"data\": {\n        \"user\": {\n            \"id\": 5,\n            \"email\": \"mael@gmail.com\",\n            \"name\": \"Mael\",\n            \"photo\": \"https://res.cloudinary.com/dyxgesrbu/image/upload/v1713587893/1b622f879a655bcad992da4380513cb9.jpg\",\n            \"updatedAt\": \"2024-04-20T04:38:13.998Z\",\n            \"createdAt\": \"2024-04-20T04:38:13.998Z\",\n            \"role\": \"user\",\n            \"deletedAt\": null\n        },\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNzEzNTg3ODk0LCJleHAiOjE3MTM1OTE0OTR9.MWmDA9EUKYEAWszrV47MkhqlB0m9B-L8uxE5QxalOuc\"\n    }\n}"
+						},
+						{
+							"name": "error email already exists",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "jarjit@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "jarjit123",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "Jarjit Singh",
+											"type": "text"
+										},
+										{
+											"key": "photo",
+											"type": "file",
+											"src": "/C:/Users/LENOVO/OneDrive/Pictures/dummy-photos/jarjit.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/auth/register",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"auth",
+										"register"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2e-gPp0xfyVSTnq26u262HOiwX8jbU\""
+								},
+								{
+									"key": "X-Cloud-Trace-Context",
+									"value": "a4791a7709ddf7cd37922e81c479e5c6;o=1"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 20 Apr 2024 04:37:05 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Google Frontend"
+								},
+								{
+									"key": "Content-Length",
+									"value": "46"
+								},
+								{
+									"key": "Alt-Svc",
+									"value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": null,\n    \"message\": \"Email already exists\"\n}"
+						}
+					]
 				},
 				{
 					"name": "Login",
@@ -980,7 +4356,150 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"mael@gmail.com\",\r\n    \"password\": \"mael123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/auth/login",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1cc-9RspnyklWbc5yQCClh1fFKtNAjI\""
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "X-Cloud-Trace-Context",
+									"value": "644abe238737d5823e19ff75aa766431;o=1"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 20 Apr 2024 04:38:45 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Google Frontend"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "private"
+								},
+								{
+									"key": "Alt-Svc",
+									"value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Login Successful\",\n    \"data\": {\n        \"user\": {\n            \"id\": 5,\n            \"email\": \"mael@gmail.com\",\n            \"name\": \"Mael\",\n            \"photo\": \"https://res.cloudinary.com/dyxgesrbu/image/upload/v1713587893/1b622f879a655bcad992da4380513cb9.jpg\",\n            \"updatedAt\": \"2024-04-20T04:38:13.998Z\",\n            \"createdAt\": \"2024-04-20T04:38:13.998Z\",\n            \"role\": \"user\",\n            \"deletedAt\": null\n        },\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNzEzNTg3OTI1LCJleHAiOjE3MTM1OTE1MjV9.112n6W2E8-Oh0UnuEDXEZevGRzYLNtnSbm6pgifH0XA\"\n    }\n}"
+						},
+						{
+							"name": "error wrong password",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"mael@gmail.com\",\r\n    \"password\": \"mael1234\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/auth/login",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"29-qZPCwzWBL9KgYVmnl7sHsJwV9Q4\""
+								},
+								{
+									"key": "X-Cloud-Trace-Context",
+									"value": "54918bf4d2ca1c0e301b8c051009eb21;o=1"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 20 Apr 2024 04:39:08 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Google Frontend"
+								},
+								{
+									"key": "Content-Length",
+									"value": "41"
+								},
+								{
+									"key": "Alt-Svc",
+									"value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": null,\n    \"message\": \"Wrong password!\"\n}"
+						}
+					]
 				},
 				{
 					"name": "Get Profile",
@@ -1004,7 +4523,82 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{TOKEN}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/auth/profile",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"auth",
+										"profile"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"142-gnwhi/f/QKUoB2jsYpw/9Ea6Roo\""
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "X-Cloud-Trace-Context",
+									"value": "48b2fc90e687f997f78124c70eda283e;o=1"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 20 Apr 2024 04:39:45 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Google Frontend"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "private"
+								},
+								{
+									"key": "Alt-Svc",
+									"value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"User Profile retrieved successfully\",\n    \"data\": {\n        \"id\": 5,\n        \"email\": \"mael@gmail.com\",\n        \"name\": \"Mael\",\n        \"photo\": \"https://res.cloudinary.com/dyxgesrbu/image/upload/v1713587893/1b622f879a655bcad992da4380513cb9.jpg\",\n        \"updatedAt\": \"2024-04-20T04:38:13.998Z\",\n        \"createdAt\": \"2024-04-20T04:38:13.998Z\",\n        \"role\": \"user\",\n        \"deletedAt\": null\n    }\n}"
+						}
+					]
 				}
 			]
 		},
@@ -1064,7 +4658,299 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{TOKEN}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "muthu@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "muthu123",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "Uncle Muthu",
+											"type": "text"
+										},
+										{
+											"key": "photo",
+											"type": "file",
+											"src": "/C:/Users/LENOVO/OneDrive/Pictures/dummy-photos/profile.jpg"
+										},
+										{
+											"key": "",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/auth/admin",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"auth",
+										"admin"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1df-fgtzz4kKaoQHiqhjH23+lgav7gc\""
+								},
+								{
+									"key": "X-Cloud-Trace-Context",
+									"value": "32e8946fd5ffc6469d68e8c9da7cd859;o=1"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 20 Apr 2024 04:42:24 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Google Frontend"
+								},
+								{
+									"key": "Content-Length",
+									"value": "479"
+								},
+								{
+									"key": "Alt-Svc",
+									"value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Admin created successfully\",\n    \"data\": {\n        \"user\": {\n            \"id\": 6,\n            \"email\": \"muthu@gmail.com\",\n            \"name\": \"Uncle Muthu\",\n            \"photo\": \"https://res.cloudinary.com/dyxgesrbu/image/upload/v1713588144/4ba6a841aeb6974e2a302e8717d87a1a.jpg\",\n            \"role\": \"admin\",\n            \"updatedAt\": \"2024-04-20T04:42:24.849Z\",\n            \"createdAt\": \"2024-04-20T04:42:24.849Z\",\n            \"deletedAt\": null\n        },\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwiaWF0IjoxNzEzNTg4MTQ0LCJleHAiOjE3MTM1OTE3NDR9.rmngjAhU2OnF68Rc6y33aub9_KkdyrUrGwGe4dq-srY\"\n    }\n}"
+						},
+						{
+							"name": "error forbidden",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{TOKEN}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "muthu@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "muthu123",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "Uncle Muthu",
+											"type": "text"
+										},
+										{
+											"key": "photo",
+											"type": "file",
+											"src": "/C:/Users/LENOVO/OneDrive/Pictures/dummy-photos/profile.jpg"
+										},
+										{
+											"key": "",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/auth/admin",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"auth",
+										"admin"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"24-naO5TyrlTaRZU37ToCZgQhaiEj0\""
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "X-Cloud-Trace-Context",
+									"value": "290df729f19ee4711579acba590deea0;o=1"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 20 Apr 2024 04:41:22 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Google Frontend"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "private"
+								},
+								{
+									"key": "Alt-Svc",
+									"value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": null,\n    \"message\": \"Forbidden!\"\n}"
+						},
+						{
+							"name": "error email already exists",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{TOKEN}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "muthu@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "muthu123456",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "Angkel Mutu Tampan",
+											"type": "text"
+										},
+										{
+											"key": "photo",
+											"type": "file",
+											"src": "/C:/Users/LENOVO/OneDrive/Pictures/dummy-photos/profile.jpg"
+										},
+										{
+											"key": "",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/auth/admin",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"auth",
+										"admin"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2e-gPp0xfyVSTnq26u262HOiwX8jbU\""
+								},
+								{
+									"key": "X-Cloud-Trace-Context",
+									"value": "88b769785f082ba6195101acee0fa840;o=1"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 20 Apr 2024 04:43:02 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Google Frontend"
+								},
+								{
+									"key": "Content-Length",
+									"value": "46"
+								},
+								{
+									"key": "Alt-Svc",
+									"value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": null,\n    \"message\": \"Email already exists\"\n}"
+						}
+					]
 				}
 			]
 		}
