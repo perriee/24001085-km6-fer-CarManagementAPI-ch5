@@ -6,6 +6,12 @@ const { uploadToCloudinary } = require("../../helper/cloudinary");
 const { setDataRedis } = require("../../helper/redis");
 
 exports.createAdmin = async (payload) => {
+    // check if the email already exists
+    const existingUser = await User.findOne({ where: { email: payload.email } });
+    if (existingUser) {
+        throw new Error("Email already exists");
+    }
+
     // encrypt the password
     payload.password = bcrypt.hashSync(payload.password, 10);
 
