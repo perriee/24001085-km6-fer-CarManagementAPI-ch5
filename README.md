@@ -41,9 +41,13 @@ cp .env.example .env
 npm run dev
 ```
 
-#### 4. Access Port
+#### 5. Access Port
 
 by default server running in `localhost:3000`
+
+## Superadmin Account
+- email: superadmin@gmail.com
+- pass: superadmin123
 
 ## API Reference
 
