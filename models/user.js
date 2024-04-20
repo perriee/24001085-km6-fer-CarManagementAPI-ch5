@@ -13,7 +13,13 @@ module.exports = (sequelize, DataTypes) => {
     }
     User.init(
         {
-            email: DataTypes.STRING,
+            email: {
+                type: DataTypes.STRING,
+                unique: true, // Add the unique constraint
+                validate: {
+                    isEmail: true, // Validate email format
+                },
+            },
             password: DataTypes.STRING,
             name: DataTypes.STRING,
             photo: DataTypes.STRING,
