@@ -7,19 +7,6 @@ exports.baseQueryOptions = {
     },
     include: [
         {
-            model: User,
-            attributes: {
-                exclude: [
-                    "createdAt",
-                    "updatedAt",
-                    "deletedAt",
-                    "createdBy",
-                    "deletedBy",
-                    "lastUpdatedBy",
-                ],
-            },
-        },
-        {
             model: Manufacture,
             attributes: {
                 exclude: [
