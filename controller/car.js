@@ -40,6 +40,7 @@ exports.createCar = async (req, res, next) => {
             name,
             plate,
             model,
+            description,
             rentPerDay,
             year,
             available,
@@ -48,6 +49,7 @@ exports.createCar = async (req, res, next) => {
             size_id,
             transmission_id,
         } = req.body;
+        console.log("REQBODY --->", req.body);
         const userID = req.user.id;
 
         let image;
@@ -73,6 +75,13 @@ exports.createCar = async (req, res, next) => {
         if (!model || model == "") {
             return next({
                 message: "model is required",
+                statusCode: 404,
+            });
+        }
+
+        if (!description || description == "") {
+            return next({
+                message: "description is required",
                 statusCode: 404,
             });
         }
@@ -159,6 +168,7 @@ exports.createCar = async (req, res, next) => {
             plate,
             model,
             image,
+            description,
             rentPerDay,
             year,
             available,
@@ -187,6 +197,7 @@ exports.updateCar = async (req, res, next) => {
             name,
             plate,
             model,
+            description,
             rentPerDay,
             year,
             available,
@@ -219,6 +230,13 @@ exports.updateCar = async (req, res, next) => {
         if (!model || model == "") {
             return next({
                 message: "model is required",
+                statusCode: 404,
+            });
+        }
+
+        if (!description || description == "") {
+            return next({
+                message: "description is required",
                 statusCode: 404,
             });
         }
@@ -305,6 +323,7 @@ exports.updateCar = async (req, res, next) => {
             plate,
             model,
             image,
+            description,
             rentPerDay,
             year,
             available,
